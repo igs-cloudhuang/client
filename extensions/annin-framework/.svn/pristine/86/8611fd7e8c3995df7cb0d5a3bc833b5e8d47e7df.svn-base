@@ -1,0 +1,38 @@
+import { AppManager, I18nManager, MsgboxManager, UpdateApp, UpdateBackpack, Updatei18n, UpdateLevel, UpdateMsgbox, UpdateRedPoint, UpdateSound, UpdateToast, UpdateTouchMove, UpdateVipWeb, UpdateWallet, UpdateWinMore } from '../manager'
+import { UpdateRankboard } from '../manager/rankboardManager'
+import { Bus, UpdateBus } from './bus'
+import { Comm, UpdateComm } from './comm'
+import { UpdateTimer } from './timer'
+
+export * from './automata'
+export * from './bus'
+export * from './comm'
+export * from './timer'
+
+export function AnninInit() {
+    UpdateSound()
+    UpdateTouchMove()
+    UpdateToast()
+    UpdateApp()
+    Updatei18n()
+    UpdateMsgbox()
+    UpdateVipWeb()
+    UpdateWallet()
+    UpdateWinMore()
+    UpdateLevel()
+    UpdateBackpack()
+    UpdateRankboard()
+    UpdateRedPoint()
+
+    UpdateBus()
+    UpdateComm()
+    UpdateTimer()
+}
+
+export class annin {
+    Msgbox: MsgboxManager
+    i18n: I18nManager
+    App: AppManager
+    Comm: Comm
+    Bus: Bus
+}

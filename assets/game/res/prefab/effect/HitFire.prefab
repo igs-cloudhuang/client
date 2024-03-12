@@ -1,0 +1,109 @@
+[
+  {
+    "__type__": "cc.Prefab",
+    "_name": "HitFire",
+    "_objFlags": 0,
+    "_native": "",
+    "data": {
+      "__id__": 1
+    },
+    "optimizationPolicy": 0,
+    "persistent": false,
+    "asyncLoadAssets": false
+  },
+  {
+    "__type__": "cc.Node",
+    "_name": "HitFire",
+    "_objFlags": 0,
+    "__editorExtras__": {},
+    "_parent": null,
+    "_children": [],
+    "_active": true,
+    "_components": [
+      {
+        "__id__": 2
+      }
+    ],
+    "_prefab": {
+      "__id__": 4
+    },
+    "_lpos": {
+      "__type__": "cc.Vec3",
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "_lrot": {
+      "__type__": "cc.Quat",
+      "x": 0,
+      "y": 0,
+      "z": 0,
+      "w": 1
+    },
+    "_lscale": {
+      "__type__": "cc.Vec3",
+      "x": 25,
+      "y": 25,
+      "z": 25
+    },
+    "_layer": 8388608,
+    "_euler": {
+      "__type__": "cc.Vec3",
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "_id": ""
+  },
+  {
+    "__type__": "1d189MYptBN74HAnWl02Xv/",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 1
+    },
+    "_enabled": true,
+    "__prefab": {
+      "__id__": 3
+    },
+    "_materials": [],
+    "_visFlags": 0,
+    "_efk": {
+      "__uuid__": "fcd0445f-a9fb-4c4b-ac02-f98cac64c6b8",
+      "__expectedType__": "cc.Asset"
+    },
+    "efkModels": [],
+    "efkTextures": [
+      {
+        "__uuid__": "1d147419-b267-441a-8b35-94fad638e048@6c48a",
+        "__expectedType__": "cc.Texture2D"
+      },
+      {
+        "__uuid__": "26995c3d-16ff-4984-8770-0657e225f1f8@6c48a",
+        "__expectedType__": "cc.Texture2D"
+      }
+    ],
+    "efkMats": [],
+    "efkConfig": {
+      "__uuid__": "6b7033b8-a9a2-4026-9cef-cace182c35fb",
+      "__expectedType__": "cc.Prefab"
+    },
+    "autoDestroy": false,
+    "_repeat": false,
+    "_id": ""
+  },
+  {
+    "__type__": "cc.CompPrefabInfo",
+    "fileId": "b53RIMuAlDNIeVTeXnRxA2"
+  },
+  {
+    "__type__": "cc.PrefabInfo",
+    "root": {
+      "__id__": 1
+    },
+    "asset": {
+      "__id__": 0
+    },
+    "fileId": "a78T2nl1VCsrR6x3ZQN0jJ"
+  }
+]

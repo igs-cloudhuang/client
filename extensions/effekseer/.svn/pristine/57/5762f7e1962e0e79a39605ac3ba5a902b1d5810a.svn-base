@@ -1,0 +1,33 @@
+// Effect Syntax Guide: https://docs.cocos.com/creator/manual/zh/shader/index.html
+
+CCEffect %{
+  techniques:
+  - name: opaque
+    passes:
+    - vert: sprite_lit_vs:vert
+      frag: model_lit_ps:frag
+      properties: &props
+  - name: transparent
+    passes:
+    - vert: sprite_lit_vs:vert
+      frag: model_lit_ps:frag
+      blendState:
+        targets:
+        - blend: true
+          blendSrc: src_alpha
+          blendDst: one_minus_src_alpha
+          blendSrcAlpha: src_alpha
+          blendDstAlpha: one_minus_src_alpha
+      properties: *props
+}%
+
+CCProgram sprite_lit_vs %{
+  precision highp float;
+  #include "../chunk/sprite_lit_vs.chunk"
+}%
+
+CCProgram model_lit_ps %{
+  precision highp float;
+  #include "../chunk/model_lit_ps.chunk"
+}%
+

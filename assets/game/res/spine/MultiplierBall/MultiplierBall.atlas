@@ -1,0 +1,279 @@
+
+MultiplierBall.png
+size: 854,854
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Add/Add_Lightning_chip_2
+  rotate: false
+  xy: 503, 586
+  size: 139, 137
+  orig: 150, 150
+  offset: 11, 0
+  index: -1
+Add/Add_Lightning_chip_4
+  rotate: false
+  xy: 1, 62
+  size: 138, 149
+  orig: 150, 150
+  offset: 12, 0
+  index: -1
+Add/Add_Lightning_chip_6
+  rotate: false
+  xy: 259, 363
+  size: 145, 106
+  orig: 150, 150
+  offset: 5, 23
+  index: -1
+Add/Add_Lightning_chip_8
+  rotate: false
+  xy: 774, 640
+  size: 65, 83
+  orig: 150, 150
+  offset: 0, 25
+  index: -1
+Add/EXP_HighLight01_00
+  rotate: false
+  xy: 774, 596
+  size: 50, 42
+  orig: 50, 50
+  offset: 0, 8
+  index: -1
+Add/FX_Golw_02
+  rotate: false
+  xy: 644, 595
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+Add/FX_Light_00
+  rotate: false
+  xy: 220, 41
+  size: 40, 40
+  orig: 40, 40
+  offset: 0, 0
+  index: -1
+Add/FX_Light_05
+  rotate: false
+  xy: 141, 83
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+Add/FX_Line_01
+  rotate: true
+  xy: 1, 20
+  size: 40, 128
+  orig: 128, 128
+  offset: 43, 0
+  index: -1
+Add/FX_Rainbow_02
+  rotate: false
+  xy: 503, 725
+  size: 218, 128
+  orig: 218, 128
+  offset: 0, 0
+  index: -1
+Add/FX_Shock_Wave_01
+  rotate: true
+  xy: 515, 1
+  size: 100, 101
+  orig: 100, 101
+  offset: 0, 0
+  index: -1
+Add/FX_Shock_Wave_06
+  rotate: false
+  xy: 402, 207
+  size: 117, 117
+  orig: 128, 128
+  offset: 6, 5
+  index: -1
+Add/FX_wave1
+  rotate: false
+  xy: 723, 725
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+Add/Galaxy_Stars_01_y_0
+  rotate: false
+  xy: 748, 167
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1
+Add/Lightning_Big01
+  rotate: false
+  xy: 1, 728
+  size: 500, 125
+  orig: 500, 125
+  offset: 0, 0
+  index: -1
+Add/Lightning_Big02
+  rotate: false
+  xy: 1, 601
+  size: 500, 125
+  orig: 500, 125
+  offset: 0, 0
+  index: -1
+Add/Lightning_Big03
+  rotate: false
+  xy: 1, 471
+  size: 465, 128
+  orig: 501, 128
+  offset: 2, 0
+  index: -1
+Add/lightningEdge_16
+  rotate: false
+  xy: 1, 213
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+Add/lightningRing/lightningRing_0
+  rotate: false
+  xy: 271, 90
+  size: 126, 128
+  orig: 128, 128
+  offset: 1, 0
+  index: -1
+Add/lightningRing/lightningRing_2
+  rotate: false
+  xy: 468, 456
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+Add/lightningRing/lightningRing_4
+  rotate: false
+  xy: 598, 456
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+Add/lightningRing/lightningRing_6
+  rotate: false
+  xy: 406, 326
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+Ball
+  rotate: false
+  xy: 259, 220
+  size: 141, 141
+  orig: 141, 141
+  offset: 0, 0
+  index: -1
+NUM/0
+  rotate: true
+  xy: 773, 427
+  size: 54, 80
+  orig: 54, 102
+  offset: 0, 11
+  index: -1
+NUM/1
+  rotate: true
+  xy: 141, 50
+  size: 31, 77
+  orig: 54, 102
+  offset: 8, 13
+  index: -1
+NUM/2
+  rotate: false
+  xy: 618, 22
+  size: 53, 79
+  orig: 54, 102
+  offset: 1, 12
+  index: -1
+NUM/3
+  rotate: true
+  xy: 773, 371
+  size: 54, 80
+  orig: 54, 102
+  offset: 0, 11
+  index: -1
+NUM/5
+  rotate: false
+  xy: 673, 22
+  size: 54, 79
+  orig: 54, 102
+  offset: 0, 11
+  index: -1
+NUM/xx
+  rotate: false
+  xy: 741, 108
+  size: 54, 57
+  orig: 54, 102
+  offset: 0, 21
+  index: -1
+Seq/BallSeq_0
+  rotate: true
+  xy: 521, 103
+  size: 108, 109
+  orig: 128, 128
+  offset: 9, 11
+  index: -1
+Seq/BallSeq_10
+  rotate: false
+  xy: 639, 214
+  size: 107, 110
+  orig: 128, 128
+  offset: 9, 12
+  index: -1
+Seq/BallSeq_12
+  rotate: false
+  xy: 399, 96
+  size: 114, 109
+  orig: 128, 128
+  offset: 6, 11
+  index: -1
+Seq/BallSeq_14
+  rotate: false
+  xy: 748, 233
+  size: 105, 109
+  orig: 128, 128
+  offset: 9, 11
+  index: -1
+Seq/BallSeq_2
+  rotate: false
+  xy: 632, 103
+  size: 107, 108
+  orig: 128, 128
+  offset: 9, 11
+  index: -1
+Seq/BallSeq_4
+  rotate: false
+  xy: 666, 344
+  size: 105, 110
+  orig: 128, 128
+  offset: 9, 11
+  index: -1
+Seq/BallSeq_6
+  rotate: false
+  xy: 521, 213
+  size: 116, 111
+  orig: 128, 128
+  offset: 5, 10
+  index: -1
+Seq/BallSeq_8
+  rotate: false
+  xy: 728, 483
+  size: 109, 110
+  orig: 128, 128
+  offset: 9, 12
+  index: -1
+T_Award_Bon_0
+  rotate: false
+  xy: 536, 326
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+_PT_Smoke01_0
+  rotate: false
+  xy: 814, 192
+  size: 39, 39
+  orig: 40, 40
+  offset: 1, 1
+  index: -1

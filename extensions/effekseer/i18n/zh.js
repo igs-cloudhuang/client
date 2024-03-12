@@ -1,0 +1,1 @@
+"use strict";module.exports={description:"厦门雅基软件有限公司"};

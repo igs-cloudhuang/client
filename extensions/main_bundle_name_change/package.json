@@ -1,0 +1,14 @@
+{
+    "name": "main_bundle_name_change",
+    "title": "main_bundle_name_change",
+    "package_version": 2,
+    "version": "1.0.2",
+    "author": "cwchang",
+    "description": "i18n:main_bundle_name_change.description",
+    "contributions": {
+        "builder": "./dist/builder.js"
+    },
+    "devDependencies": {
+        "@types/node": "^18.8.2"
+    }
+}

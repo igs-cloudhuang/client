@@ -1,0 +1,6 @@
+if (!globalThis.Annin) {
+    globalThis.Annin = {}
+}
+
+let Annin = globalThis.Annin
+export { Annin }

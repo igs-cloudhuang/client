@@ -1,0 +1,206 @@
+{
+  "ver": "2.3.1",
+  "importer": "fbx",
+  "imported": true,
+  "uuid": "0fbba4ee-3aed-4853-ad1c-e13cc546d636",
+  "files": [
+    "__original-animation-0.cconb"
+  ],
+  "subMetas": {
+    "12338": {
+      "importer": "gltf-animation",
+      "uuid": "0fbba4ee-3aed-4853-ad1c-e13cc546d636@12338",
+      "displayName": "",
+      "id": "12338",
+      "name": "Weapon_missile_01.animation",
+      "userData": {
+        "gltfIndex": 0,
+        "wrapMode": 2,
+        "sample": 30,
+        "span": {
+          "from": 0,
+          "to": 0.4000000059604645
+        },
+        "events": []
+      },
+      "ver": "1.0.16",
+      "imported": true,
+      "files": [
+        ".cconb"
+      ],
+      "subMetas": {}
+    },
+    "40422": {
+      "importer": "gltf-mesh",
+      "uuid": "0fbba4ee-3aed-4853-ad1c-e13cc546d636@40422",
+      "displayName": "",
+      "id": "40422",
+      "name": "fire_texture.mesh",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.1.0",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "438fe": {
+      "importer": "gltf-skeleton",
+      "uuid": "0fbba4ee-3aed-4853-ad1c-e13cc546d636@438fe",
+      "displayName": "",
+      "id": "438fe",
+      "name": "UnnamedSkeleton.skeleton",
+      "userData": {
+        "gltfIndex": 0,
+        "jointsLength": 1
+      },
+      "ver": "1.0.1",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "f15f6": {
+      "importer": "texture",
+      "uuid": "0fbba4ee-3aed-4853-ad1c-e13cc546d636@f15f6",
+      "displayName": "",
+      "id": "f15f6",
+      "name": "Map #55.texture",
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "anisotropy": 0,
+        "isUuid": false,
+        "imageUuidOrDatabaseUri": "db://assets/game/res/fbx/bullet/Bullet_fire.jpg"
+      },
+      "ver": "1.0.22",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "5f42e": {
+      "importer": "gltf-material",
+      "uuid": "0fbba4ee-3aed-4853-ad1c-e13cc546d636@5f42e",
+      "displayName": "",
+      "id": "5f42e",
+      "name": "Material #430.material",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "604c9": {
+      "importer": "gltf-scene",
+      "uuid": "0fbba4ee-3aed-4853-ad1c-e13cc546d636@604c9",
+      "displayName": "",
+      "id": "604c9",
+      "name": "Fire_small.prefab",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.12",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "imageMetas": [
+      {
+        "name": "Map #55",
+        "uri": "db://assets/game/res/fbx/bullet/Bullet_fire.jpg"
+      }
+    ],
+    "fbx": {
+      "smartMaterialEnabled": true
+    },
+    "animationImportSettings": [
+      {
+        "name": "Weapon_missile_01",
+        "duration": 0.4000000059604645,
+        "fps": 30,
+        "splits": [
+          {
+            "name": "Weapon_missile_01",
+            "from": 0,
+            "to": 0.4000000059604645,
+            "wrapMode": 2
+          }
+        ]
+      }
+    ],
+    "redirect": "0fbba4ee-3aed-4853-ad1c-e13cc546d636@604c9",
+    "assetFinder": {
+      "meshes": [
+        "0fbba4ee-3aed-4853-ad1c-e13cc546d636@40422"
+      ],
+      "skeletons": [
+        "0fbba4ee-3aed-4853-ad1c-e13cc546d636@438fe"
+      ],
+      "textures": [
+        "0fbba4ee-3aed-4853-ad1c-e13cc546d636@f15f6"
+      ],
+      "materials": [
+        "0fbba4ee-3aed-4853-ad1c-e13cc546d636@5f42e"
+      ],
+      "scenes": [
+        "0fbba4ee-3aed-4853-ad1c-e13cc546d636@604c9"
+      ]
+    },
+    "materials": {
+      "0fbba4ee-3aed-4853-ad1c-e13cc546d636@5f42e": {
+        "__type__": "cc.Material",
+        "_name": "",
+        "_objFlags": 0,
+        "_native": "",
+        "_effectAsset": {
+          "__uuid__": "a3cd009f-0ab0-420d-9278-b9fdab939bbc",
+          "__expectedType__": "cc.EffectAsset"
+        },
+        "_techIdx": "2",
+        "_defines": [
+          {
+            "USE_INSTANCING": true,
+            "USE_TEXTURE": true
+          }
+        ],
+        "_states": [
+          {
+            "rasterizerState": {},
+            "depthStencilState": {},
+            "blendState": {
+              "targets": [
+                {}
+              ]
+            }
+          }
+        ],
+        "_props": [
+          {
+            "mainTexture": {
+              "__uuid__": "e325c1ee-e79c-4b69-9b18-7411378ee26a@6c48a",
+              "__expectedType__": "cc.Texture2D"
+            }
+          }
+        ]
+      }
+    },
+    "tangents": 0
+  }
+}

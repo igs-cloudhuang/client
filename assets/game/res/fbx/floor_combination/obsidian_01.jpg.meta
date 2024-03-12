@@ -1,0 +1,46 @@
+{
+  "ver": "1.0.25",
+  "importer": "image",
+  "imported": true,
+  "uuid": "f125d861-0569-4e2d-a5ef-27852033b8ec",
+  "files": [
+    ".jpg",
+    ".json"
+  ],
+  "subMetas": {
+    "6c48a": {
+      "importer": "texture",
+      "uuid": "f125d861-0569-4e2d-a5ef-27852033b8ec@6c48a",
+      "displayName": "obsidian_01",
+      "id": "6c48a",
+      "name": "texture",
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "anisotropy": 0,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "f125d861-0569-4e2d-a5ef-27852033b8ec",
+        "visible": true
+      },
+      "ver": "1.0.22",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "type": "texture",
+    "fixAlphaTransparencyArtifacts": false,
+    "hasAlpha": false,
+    "redirect": "f125d861-0569-4e2d-a5ef-27852033b8ec@6c48a",
+    "compressSettings": {
+      "useCompressTexture": true,
+      "presetId": "3bBkNvvTtOT7cEIl90nJdx"
+    }
+  }
+}

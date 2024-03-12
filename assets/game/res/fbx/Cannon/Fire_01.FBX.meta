@@ -1,0 +1,147 @@
+{
+  "ver": "2.3.1",
+  "importer": "fbx",
+  "imported": true,
+  "uuid": "8003de08-9761-41ef-8770-79f8603afedb",
+  "files": [],
+  "subMetas": {
+    "40422": {
+      "importer": "gltf-mesh",
+      "uuid": "8003de08-9761-41ef-8770-79f8603afedb@40422",
+      "displayName": "",
+      "id": "40422",
+      "name": "fire_texture.mesh",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.1.0",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "d89c2": {
+      "importer": "texture",
+      "uuid": "8003de08-9761-41ef-8770-79f8603afedb@d89c2",
+      "displayName": "",
+      "id": "d89c2",
+      "name": "Map #57.texture",
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "anisotropy": 0,
+        "isUuid": false,
+        "imageUuidOrDatabaseUri": "db://assets/game/res/fbx/Cannon/Fire_1.png"
+      },
+      "ver": "1.0.22",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "e998b": {
+      "importer": "gltf-material",
+      "uuid": "8003de08-9761-41ef-8770-79f8603afedb@e998b",
+      "displayName": "",
+      "id": "e998b",
+      "name": "Material #442.material",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "29b35": {
+      "importer": "gltf-scene",
+      "uuid": "8003de08-9761-41ef-8770-79f8603afedb@29b35",
+      "displayName": "",
+      "id": "29b35",
+      "name": "Fire_01.prefab",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.12",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "imageMetas": [
+      {
+        "name": "Map #57",
+        "uri": "db://assets/game/res/fbx/Cannon/Fire_1.png"
+      }
+    ],
+    "fbx": {
+      "smartMaterialEnabled": true
+    },
+    "redirect": "8003de08-9761-41ef-8770-79f8603afedb@29b35",
+    "assetFinder": {
+      "meshes": [
+        "8003de08-9761-41ef-8770-79f8603afedb@40422"
+      ],
+      "skeletons": [],
+      "textures": [
+        "8003de08-9761-41ef-8770-79f8603afedb@d89c2"
+      ],
+      "materials": [
+        "8003de08-9761-41ef-8770-79f8603afedb@e998b"
+      ],
+      "scenes": [
+        "8003de08-9761-41ef-8770-79f8603afedb@29b35"
+      ]
+    },
+    "materials": {
+      "8003de08-9761-41ef-8770-79f8603afedb@e998b": {
+        "__type__": "cc.Material",
+        "_name": "",
+        "_objFlags": 0,
+        "_native": "",
+        "_effectAsset": {
+          "__uuid__": "a3cd009f-0ab0-420d-9278-b9fdab939bbc",
+          "__expectedType__": "cc.EffectAsset"
+        },
+        "_techIdx": "2",
+        "_defines": [
+          {
+            "USE_INSTANCING": true,
+            "USE_TEXTURE": true
+          }
+        ],
+        "_states": [
+          {
+            "rasterizerState": {},
+            "depthStencilState": {},
+            "blendState": {
+              "targets": [
+                {}
+              ]
+            }
+          }
+        ],
+        "_props": [
+          {
+            "mainTexture": {
+              "__uuid__": "3663d79a-9ed7-4de1-9b13-e55055d689a5@6c48a",
+              "__expectedType__": "cc.Texture2D"
+            }
+          }
+        ]
+      }
+    },
+    "tangents": 0
+  }
+}

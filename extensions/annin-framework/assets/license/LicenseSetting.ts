@@ -1,0 +1,290 @@
+/**
+ * License定義
+ */
+export enum LicenseID
+{
+    None,
+    GLI_UKGC,
+    GLI_Malta,
+    GLI_Colombia,
+    BMM_UKGC,
+    BMM_Malta,
+    GA_UKGC,
+    GA_Malta,
+    GA_Romania,
+    GA_AGCO,
+    GA_Sweden,
+    GA_Switzerland,
+    GA_Spain,
+    GA_Greece,
+    GA_Italy,
+    GLI_Romania,
+    GLI_Italy,
+    GLI_Greece,
+    GLI_Spain,
+    GLI_Switzerland,
+    GLI_Sweden,
+    GLI_AGCO,
+    BMM_Spain,
+    BMM_Denmark,
+    BMM_Romania,
+    BMM_Sweden,
+    BMM_Portugal,
+    BMM_Switzerland,
+    BMM_Colombia,
+    BMM_Greece,
+    BMM_Netherlands,
+    BMM_Italy,
+    BMM_Germany,
+    BMM_AGCO,
+}
+
+/**
+ * SwitchOff定義
+ */
+export enum SwitchOffKeyDefine
+{
+    ShopingMall = 1,             // 關閉內購
+    SmartMessage = 2,            // 關閉智能訊息
+    Promotion = 3,               // 關閉推薦收藏
+    TreasureChest = 4,           // 關閉百寶箱ICON
+    GameHistory = 5,             // 關閉歷程
+    FeaturedDisplay = 6,         // 關閉特色遊玩功能
+    CoinAccuracy = 7,            // 強制顯示小數點後兩位
+    CurrencySymbol = 8,          // 關閉幣別符號
+    ItemBoxImport = 9,           // 背包跳轉 TODO可移除
+    AllChangeGameImport = 10,    // 關閉遊戲跳轉
+    AutoPlay = 11,               // 關閉自動玩
+    IsDelay = 12,                // 是否需要延遲進入下一局，有的話要延遲 TODO可移除
+    CloseSpeedUp = 13,           // 關閉快停
+    CloseBackpack = 14,          // 關閉背包
+    Trail = 15,                  // 關閉洗碼(免費贈金)
+    ShowAutoSetting = 16,        // 自動玩需先開啟設定面板 (遊戲端使用)
+    NoSoundUnder1 = 17,          // 贏分大於1倍才能有音效 (遊戲端使用)
+    NoQuickSpin = 18,            // 禁用空白鍵、盤面的Spin功能 (遊戲端使用)
+    RatioOnView = 19,            // 遊戲說明按鈕(?那顆)要在主畫面 (公版使用)
+    ShowPlateformVer = 20,       // 顯示平台版本號 (公版使用)
+    ShowTime = 21,               // 顯示時間 (公版使用)
+    ShowPlayTime = 22,           // 顯示遊玩時間 (公版使用)
+    BlockLobbyOff = 23,          // 區塊鍊競猜大廳關閉(未開啟)
+    NoRedSpot = 24,              // 贏更多不顯示紅點
+    CloseVip = 25,               // 不顯示VIP資訊
+    CloseBuyBonusInfo = 26,      // 不顯示內購的說明按鈕
+    CloseSettingInfo = 27,       // 不顯示設定內說明頁按鈕 TODO可移除
+    UseKilo = 28,                // 使用千位數縮寫
+    ClickAutoSetting = 29,       // 送審自動玩面板選項打開 TODO暫無使用
+    CloseBuyBonusAdd = 30,       // buybonus面板加減關閉 TODO暫無使用
+    RemoveDecimal = 31,          // 不顯示小數點
+    ShowBuyBonusBetInfo = 32,    // 開啟BuyBonus押注資訊
+    CloseWinTxtWithZero = 33,    // 贏分為0時關閉WIN文字
+    ShowNetWin = 34,             // 顯示淨利
+    CloseSideFeatures = 35,      // 關閉周邊機制 (送審用;buybonus不受此限制)
+    RealityCheck = 36,           // 開啟防沉迷機制 TODO暫無使用
+    CloseJPList = 37,            // 關閉JP中獎歷史紀錄
+    DisableSettingInfo = 38,     // 不啟用說明頁按鈕 (送審規範：Spin和FG時說明頁按鈕不可點擊)
+    CloseManual = 39             // 關閉特色描述 (送審規範：不顯示特色描述)
+}
+
+/**
+ * License要啟用的SwitchOff定義
+ */
+export function GetSetting( licenseID: LicenseID ): number[]
+{
+    switch ( licenseID )
+    {
+        case LicenseID.GLI_UKGC:
+        case LicenseID.GLI_Italy:
+        case LicenseID.GLI_Greece:
+        case LicenseID.GLI_Spain:
+        case LicenseID.GLI_Switzerland:
+        case LicenseID.GLI_Sweden:
+            return [
+                SwitchOffKeyDefine.ShopingMall,
+                SwitchOffKeyDefine.SmartMessage,
+                SwitchOffKeyDefine.AutoPlay,
+                SwitchOffKeyDefine.CloseSpeedUp,
+                SwitchOffKeyDefine.ShowAutoSetting,
+                SwitchOffKeyDefine.NoSoundUnder1,
+                SwitchOffKeyDefine.NoQuickSpin,
+                SwitchOffKeyDefine.ShowPlateformVer,
+                SwitchOffKeyDefine.ShowTime,
+                SwitchOffKeyDefine.ShowPlayTime,
+                SwitchOffKeyDefine.CloseBuyBonusInfo,
+                SwitchOffKeyDefine.ShowBuyBonusBetInfo,
+                SwitchOffKeyDefine.CloseWinTxtWithZero,
+                SwitchOffKeyDefine.CloseJPList,
+            ];
+        case LicenseID.GLI_Malta:
+            return [
+                SwitchOffKeyDefine.SmartMessage,
+                SwitchOffKeyDefine.ShowAutoSetting,
+                SwitchOffKeyDefine.NoQuickSpin,
+                SwitchOffKeyDefine.RatioOnView,
+                SwitchOffKeyDefine.ShowPlateformVer,
+                SwitchOffKeyDefine.ShowTime,
+                SwitchOffKeyDefine.ShowPlayTime,
+                SwitchOffKeyDefine.CloseBuyBonusInfo,
+                SwitchOffKeyDefine.ShowBuyBonusBetInfo,
+                SwitchOffKeyDefine.CloseWinTxtWithZero,
+                SwitchOffKeyDefine.CloseJPList,
+            ];
+        case LicenseID.GLI_Colombia:
+            return [
+                SwitchOffKeyDefine.SmartMessage,
+                SwitchOffKeyDefine.ShowAutoSetting,
+                SwitchOffKeyDefine.NoQuickSpin,
+                SwitchOffKeyDefine.ShowPlateformVer,
+                SwitchOffKeyDefine.ShowTime,
+                SwitchOffKeyDefine.ShowPlayTime,
+                SwitchOffKeyDefine.CloseBuyBonusInfo,
+                SwitchOffKeyDefine.ShowBuyBonusBetInfo,
+                SwitchOffKeyDefine.CloseWinTxtWithZero,
+                SwitchOffKeyDefine.CloseJPList,
+            ];
+        case LicenseID.BMM_UKGC:
+            return [
+                SwitchOffKeyDefine.ShopingMall,
+                SwitchOffKeyDefine.SmartMessage,
+                SwitchOffKeyDefine.AutoPlay,
+                SwitchOffKeyDefine.CloseSpeedUp,
+                SwitchOffKeyDefine.ShowAutoSetting,
+                SwitchOffKeyDefine.NoSoundUnder1,
+                SwitchOffKeyDefine.NoQuickSpin,
+                SwitchOffKeyDefine.ShowPlateformVer,
+                SwitchOffKeyDefine.ShowTime,
+                SwitchOffKeyDefine.ShowPlayTime,
+                SwitchOffKeyDefine.CloseBuyBonusInfo,
+                SwitchOffKeyDefine.ShowBuyBonusBetInfo,
+                SwitchOffKeyDefine.CloseWinTxtWithZero,
+                SwitchOffKeyDefine.CloseSideFeatures,
+            ];
+        case LicenseID.BMM_Malta:
+            return [
+                SwitchOffKeyDefine.SmartMessage,
+                SwitchOffKeyDefine.ShowAutoSetting,
+                SwitchOffKeyDefine.NoQuickSpin,
+                SwitchOffKeyDefine.RatioOnView,
+                SwitchOffKeyDefine.ShowPlateformVer,
+                SwitchOffKeyDefine.ShowTime,
+                SwitchOffKeyDefine.ShowPlayTime,
+                SwitchOffKeyDefine.CloseBuyBonusInfo,
+                SwitchOffKeyDefine.ShowBuyBonusBetInfo,
+                SwitchOffKeyDefine.CloseWinTxtWithZero,
+                SwitchOffKeyDefine.CloseSideFeatures,
+            ];
+        case LicenseID.GA_UKGC:
+            return [
+                SwitchOffKeyDefine.ShopingMall,
+                SwitchOffKeyDefine.SmartMessage,
+                SwitchOffKeyDefine.AutoPlay,
+                SwitchOffKeyDefine.CloseSpeedUp,
+                SwitchOffKeyDefine.ShowAutoSetting,
+                SwitchOffKeyDefine.NoSoundUnder1,
+                SwitchOffKeyDefine.NoQuickSpin,
+                SwitchOffKeyDefine.ShowPlateformVer,
+                SwitchOffKeyDefine.ShowTime,
+                SwitchOffKeyDefine.ShowPlayTime,
+                SwitchOffKeyDefine.CloseBuyBonusInfo,
+                SwitchOffKeyDefine.ShowBuyBonusBetInfo,
+                SwitchOffKeyDefine.CloseWinTxtWithZero,
+                SwitchOffKeyDefine.ShowNetWin,
+                SwitchOffKeyDefine.CloseSideFeatures,
+                SwitchOffKeyDefine.RealityCheck,
+            ];
+        case LicenseID.GA_Malta:
+        case LicenseID.GA_Sweden:
+        case LicenseID.GA_Switzerland:
+        case LicenseID.GA_Spain:
+        case LicenseID.GA_Greece:
+        case LicenseID.GA_Italy:
+            return [
+                SwitchOffKeyDefine.SmartMessage,
+                SwitchOffKeyDefine.ShowAutoSetting,
+                SwitchOffKeyDefine.NoQuickSpin,
+                SwitchOffKeyDefine.RatioOnView,
+                SwitchOffKeyDefine.ShowPlateformVer,
+                SwitchOffKeyDefine.ShowTime,
+                SwitchOffKeyDefine.ShowPlayTime,
+                SwitchOffKeyDefine.CloseBuyBonusInfo,
+                SwitchOffKeyDefine.ShowBuyBonusBetInfo,
+                SwitchOffKeyDefine.CloseWinTxtWithZero,
+                SwitchOffKeyDefine.ShowNetWin,
+                SwitchOffKeyDefine.CloseSideFeatures,
+                SwitchOffKeyDefine.RealityCheck,
+            ];
+        case LicenseID.GA_Romania:
+        case LicenseID.GLI_Romania:
+            return [
+                SwitchOffKeyDefine.SmartMessage,
+                SwitchOffKeyDefine.ShowAutoSetting,
+                SwitchOffKeyDefine.NoQuickSpin,
+                SwitchOffKeyDefine.ShowPlateformVer,
+                SwitchOffKeyDefine.ShowTime,
+                SwitchOffKeyDefine.ShowPlayTime,
+                SwitchOffKeyDefine.CloseBuyBonusInfo,
+                SwitchOffKeyDefine.ShowBuyBonusBetInfo,
+                SwitchOffKeyDefine.CloseWinTxtWithZero,
+                SwitchOffKeyDefine.ShowNetWin,
+                SwitchOffKeyDefine.CloseSideFeatures,
+                SwitchOffKeyDefine.RealityCheck,
+            ];
+        case LicenseID.GA_AGCO:
+        case LicenseID.GLI_AGCO:
+            return [
+                SwitchOffKeyDefine.ShopingMall,
+                SwitchOffKeyDefine.SmartMessage,
+                SwitchOffKeyDefine.AutoPlay,
+                SwitchOffKeyDefine.CloseSpeedUp,
+                SwitchOffKeyDefine.ShowAutoSetting,
+                SwitchOffKeyDefine.NoSoundUnder1,
+                SwitchOffKeyDefine.NoQuickSpin,
+                SwitchOffKeyDefine.ShowPlateformVer,
+                SwitchOffKeyDefine.ShowTime,
+                SwitchOffKeyDefine.ShowPlayTime,
+                SwitchOffKeyDefine.CloseBuyBonusInfo,
+                SwitchOffKeyDefine.ShowBuyBonusBetInfo,
+                SwitchOffKeyDefine.CloseWinTxtWithZero,
+                SwitchOffKeyDefine.ShowNetWin,
+                SwitchOffKeyDefine.CloseSideFeatures,
+                SwitchOffKeyDefine.RealityCheck,
+            ];
+    }
+    return [];
+}
+
+/**
+ * 判斷是否是GLI環境
+ */
+export function isGLI( licenseID: LicenseID ): boolean
+{
+    return [
+        LicenseID.GLI_UKGC,
+        LicenseID.GLI_Malta,
+        LicenseID.GLI_Colombia,
+        LicenseID.GLI_Romania,
+        LicenseID.GLI_Italy,
+        LicenseID.GLI_Greece,
+        LicenseID.GLI_Spain,
+        LicenseID.GLI_Switzerland,
+        LicenseID.GLI_Sweden,
+        LicenseID.GLI_AGCO,
+    ].includes( licenseID );
+}
+
+/**
+ * 判斷是否是GA環境
+ */
+export function isGA( licenseID: LicenseID ): boolean
+{
+    return [
+        LicenseID.GA_UKGC,
+        LicenseID.GA_Malta,
+        LicenseID.GA_Romania,
+        LicenseID.GA_AGCO,
+        LicenseID.GA_Sweden,
+        LicenseID.GA_Switzerland,
+        LicenseID.GA_Spain,
+        LicenseID.GA_Greece,
+        LicenseID.GA_Italy,
+    ].includes( licenseID );
+}

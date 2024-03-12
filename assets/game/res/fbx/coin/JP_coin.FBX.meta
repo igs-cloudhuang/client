@@ -1,0 +1,191 @@
+{
+  "ver": "2.3.1",
+  "importer": "fbx",
+  "imported": true,
+  "uuid": "fd4538ae-6a9b-4300-ab7a-632d80976e6f",
+  "files": [
+    "__original-animation-0.cconb"
+  ],
+  "subMetas": {
+    "11873": {
+      "importer": "gltf-material",
+      "uuid": "fd4538ae-6a9b-4300-ab7a-632d80976e6f@11873",
+      "displayName": "",
+      "id": "11873",
+      "name": "Material #0.material",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "45e5b": {
+      "importer": "gltf-mesh",
+      "uuid": "fd4538ae-6a9b-4300-ab7a-632d80976e6f@45e5b",
+      "displayName": "",
+      "id": "45e5b",
+      "name": "JP_coim.mesh",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.1.0",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "8679f": {
+      "importer": "gltf-animation",
+      "uuid": "fd4538ae-6a9b-4300-ab7a-632d80976e6f@8679f",
+      "displayName": "",
+      "id": "8679f",
+      "name": "coin.animation",
+      "userData": {
+        "gltfIndex": 0,
+        "wrapMode": 2,
+        "sample": 30,
+        "span": {
+          "from": 0,
+          "to": 1.3333333730697632
+        },
+        "events": [],
+        "embeddedPlayers": [],
+        "editorExtras": {
+          "embeddedPlayerGroups": []
+        },
+        "speed": 1.333
+      },
+      "ver": "1.0.16",
+      "imported": true,
+      "files": [
+        ".cconb"
+      ],
+      "subMetas": {}
+    },
+    "438fe": {
+      "importer": "gltf-skeleton",
+      "uuid": "fd4538ae-6a9b-4300-ab7a-632d80976e6f@438fe",
+      "displayName": "",
+      "id": "438fe",
+      "name": "UnnamedSkeleton.skeleton",
+      "userData": {
+        "gltfIndex": 0,
+        "jointsLength": 1
+      },
+      "ver": "1.0.1",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "32d96": {
+      "importer": "gltf-embeded-image",
+      "uuid": "fd4538ae-6a9b-4300-ab7a-632d80976e6f@32d96",
+      "displayName": "",
+      "id": "32d96",
+      "name": "Map #0.image",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.3",
+      "imported": true,
+      "files": [
+        ".json",
+        ".png"
+      ],
+      "subMetas": {}
+    },
+    "ab932": {
+      "importer": "texture",
+      "uuid": "fd4538ae-6a9b-4300-ab7a-632d80976e6f@ab932",
+      "displayName": "",
+      "id": "ab932",
+      "name": "Map #0.texture",
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "anisotropy": 0,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "fd4538ae-6a9b-4300-ab7a-632d80976e6f@32d96"
+      },
+      "ver": "1.0.22",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "59c76": {
+      "importer": "gltf-scene",
+      "uuid": "fd4538ae-6a9b-4300-ab7a-632d80976e6f@59c76",
+      "displayName": "",
+      "id": "59c76",
+      "name": "JP_coin.prefab",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.12",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "imageMetas": [
+      {
+        "name": "Map #0",
+        "uri": "fd4538ae-6a9b-4300-ab7a-632d80976e6f@32d96"
+      }
+    ],
+    "fbx": {
+      "smartMaterialEnabled": true
+    },
+    "animationImportSettings": [
+      {
+        "name": "coin",
+        "duration": 1.3333333730697632,
+        "fps": 30,
+        "splits": [
+          {
+            "name": "coin",
+            "from": 0,
+            "to": 1.3333333730697632,
+            "wrapMode": 2
+          }
+        ]
+      }
+    ],
+    "redirect": "fd4538ae-6a9b-4300-ab7a-632d80976e6f@59c76",
+    "assetFinder": {
+      "meshes": [
+        "fd4538ae-6a9b-4300-ab7a-632d80976e6f@45e5b"
+      ],
+      "skeletons": [
+        "fd4538ae-6a9b-4300-ab7a-632d80976e6f@438fe"
+      ],
+      "textures": [
+        "fd4538ae-6a9b-4300-ab7a-632d80976e6f@ab932"
+      ],
+      "materials": [
+        "fd4538ae-6a9b-4300-ab7a-632d80976e6f@11873"
+      ],
+      "scenes": [
+        "fd4538ae-6a9b-4300-ab7a-632d80976e6f@59c76"
+      ]
+    },
+    "disableMeshSplit": true,
+    "tangents": 0
+  }
+}

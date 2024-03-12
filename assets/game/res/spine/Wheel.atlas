@@ -1,0 +1,223 @@
+
+Wheel.png
+size: 968,968
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Add/Add_Particles0
+  rotate: false
+  xy: 480, 468
+  size: 247, 231
+  orig: 247, 231
+  offset: 0, 0
+  index: -1
+Add/FX_Radiance_04
+  rotate: false
+  xy: 843, 81
+  size: 91, 91
+  orig: 93, 93
+  offset: 1, 1
+  index: -1
+Add/FX_Shock_Wave_06
+  rotate: false
+  xy: 750, 174
+  size: 110, 110
+  orig: 119, 119
+  offset: 5, 4
+  index: -1
+Add/FX_Star_03
+  rotate: false
+  xy: 898, 335
+  size: 60, 60
+  orig: 60, 60
+  offset: 0, 0
+  index: -1
+Add/FX_Star_05
+  rotate: false
+  xy: 432, 88
+  size: 186, 186
+  orig: 186, 186
+  offset: 0, 0
+  index: -1
+Add/Fx_Line_01
+  rotate: true
+  xy: 432, 13
+  size: 73, 147
+  orig: 73, 147
+  offset: 0, 0
+  index: -1
+Add/Light_01
+  rotate: false
+  xy: 63, 3
+  size: 56, 56
+  orig: 56, 56
+  offset: 0, 0
+  index: -1
+Add/Light_04
+  rotate: false
+  xy: 620, 52
+  size: 112, 110
+  orig: 119, 119
+  offset: 1, 4
+  index: -1
+Add/RingGlow01
+  rotate: false
+  xy: 627, 164
+  size: 121, 121
+  orig: 158, 158
+  offset: 18, 19
+  index: -1
+Add/Star
+  rotate: false
+  xy: 898, 397
+  size: 60, 62
+  orig: 65, 65
+  offset: 0, 2
+  index: -1
+Add/Star_21
+  rotate: false
+  xy: 729, 461
+  size: 238, 238
+  orig: 238, 238
+  offset: 0, 0
+  index: -1
+Add/atom
+  rotate: false
+  xy: 794, 725
+  size: 29, 29
+  orig: 29, 29
+  offset: 0, 0
+  index: -1
+Add/light_00
+  rotate: false
+  xy: 581, 49
+  size: 37, 37
+  orig: 37, 37
+  offset: 0, 0
+  index: -1
+Add/light_00s
+  rotate: false
+  xy: 164, 31
+  size: 28, 28
+  orig: 28, 28
+  offset: 0, 0
+  index: -1
+Bg_1X1
+  rotate: false
+  xy: 432, 488
+  size: 2, 2
+  orig: 2, 2
+  offset: 0, 0
+  index: -1
+Fx/1f_starShape
+  rotate: false
+  xy: 581, 20
+  size: 27, 27
+  orig: 27, 27
+  offset: 0, 0
+  index: -1
+Fx/Light_04
+  rotate: true
+  xy: 734, 53
+  size: 109, 107
+  orig: 109, 107
+  offset: 0, 0
+  index: -1
+Fx/SmallSpots_06
+  rotate: false
+  xy: 627, 287
+  size: 176, 172
+  orig: 176, 172
+  offset: 0, 0
+  index: -1
+Fx/ringwave02
+  rotate: false
+  xy: 480, 701
+  size: 264, 266
+  orig: 335, 335
+  offset: 36, 34
+  index: -1
+P_Coin01
+  rotate: true
+  xy: 898, 286
+  size: 47, 52
+  orig: 47, 52
+  offset: 0, 0
+  index: -1
+P_Coin02
+  rotate: true
+  xy: 1, 24
+  size: 35, 60
+  orig: 60, 60
+  offset: 12, 0
+  index: -1
+P_Coin03
+  rotate: false
+  xy: 121, 15
+  size: 41, 44
+  orig: 41, 44
+  offset: 0, 0
+  index: -1
+P_Coin04
+  rotate: false
+  xy: 746, 701
+  size: 46, 53
+  orig: 46, 54
+  offset: 0, 1
+  index: -1
+Wheel/BG_Wheel_Board
+  rotate: false
+  xy: 1, 492
+  size: 477, 475
+  orig: 521, 521
+  offset: 22, 23
+  index: -1
+Wheel/BG_Wheel_Center
+  rotate: false
+  xy: 880, 717
+  size: 86, 86
+  orig: 86, 86
+  offset: 0, 0
+  index: -1
+Wheel/BG_Wheel_Grid
+  rotate: false
+  xy: 1, 61
+  size: 429, 429
+  orig: 521, 521
+  offset: 46, 46
+  index: -1
+Wheel/BG_Wheel_Pointer
+  rotate: false
+  xy: 862, 188
+  size: 71, 96
+  orig: 71, 96
+  offset: 0, 0
+  index: -1
+Wheel/BG_Wheel_Winning_Frame
+  rotate: false
+  xy: 746, 756
+  size: 132, 211
+  orig: 132, 211
+  offset: 0, 0
+  index: -1
+Wheel/BG_Wheel_Winning_Light
+  rotate: false
+  xy: 880, 805
+  size: 78, 162
+  orig: 78, 162
+  offset: 0, 0
+  index: -1
+Wheel/Black
+  rotate: false
+  xy: 432, 276
+  size: 193, 190
+  orig: 248, 246
+  offset: 27, 26
+  index: -1
+Wheel/FX_Frame_Light
+  rotate: false
+  xy: 805, 286
+  size: 91, 173
+  orig: 91, 173
+  offset: 0, 0
+  index: -1

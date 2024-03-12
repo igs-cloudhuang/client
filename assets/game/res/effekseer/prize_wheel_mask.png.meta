@@ -1,0 +1,46 @@
+{
+  "ver": "1.0.25",
+  "importer": "image",
+  "imported": true,
+  "uuid": "b309cda7-703d-4209-a4f4-086a43d2dba3",
+  "files": [
+    ".json",
+    ".png"
+  ],
+  "subMetas": {
+    "6c48a": {
+      "importer": "texture",
+      "uuid": "b309cda7-703d-4209-a4f4-086a43d2dba3@6c48a",
+      "displayName": "prize_wheel_mask",
+      "id": "6c48a",
+      "name": "texture",
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "anisotropy": 0,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "b309cda7-703d-4209-a4f4-086a43d2dba3",
+        "visible": true
+      },
+      "ver": "1.0.22",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "type": "texture",
+    "fixAlphaTransparencyArtifacts": true,
+    "hasAlpha": false,
+    "redirect": "b309cda7-703d-4209-a4f4-086a43d2dba3@6c48a",
+    "compressSettings": {
+      "useCompressTexture": true,
+      "presetId": "89f61fPH5EkLRujwAYP2Dt"
+    }
+  }
+}

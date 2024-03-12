@@ -1,0 +1,66 @@
+import { Component, Label, Node, UITransform, _decorator, clamp, v3 } from 'cc';
+import { EDITOR } from 'cc/env';
+
+const { ccclass, property, disallowMultiple, executeInEditMode, requireComponent } = _decorator;
+
+/**
+ * 當遇到使用 Label 自帶的 Shrink 也對不準長度的情況
+ * 可以試試看這個元件
+ */
+@ccclass('LabelShrink')
+@disallowMultiple
+@executeInEditMode
+@requireComponent(Label)
+export class LabelShrink extends Component {
+
+    @property
+    textLength = 40;
+
+    @property({
+        tooltip: '勾選後可以預覽縮放，但預覽完建議關閉，否則會誤存錯誤的scale',
+    })
+    preview = false;
+
+    private myScale = null;
+    private myUITrans = null as UITransform;
+
+    onLoad() {
+        this.myScale = v3(this.node.scale);
+        this.myUITrans = this.node.getComponent(UITransform);
+    }
+
+    onEnable() {
+        // 防呆檢查 (如果是 Label, RichText 沒有 Overflow 設定)
+        let lab = this.node.getComponent(Label);
+        if (lab && lab.overflow !== Label.Overflow.NONE) {
+            console.warn(`[Warn] Label overflow should be 'None' type.`);
+        }
+
+        this.node.on(Node.EventType.SIZE_CHANGED, this.updateTextLength, this);
+        this.updateTextLength();
+    }
+
+    lateUpdate(dt: number): void {
+        if(EDITOR && !this.preview) return;
+        this.updateTextLength();
+    }
+
+    onDisable() {
+        this.node.off(Node.EventType.SIZE_CHANGED, this.updateTextLength, this);
+    }
+
+    updateTextLength() {
+        if(EDITOR && !this.preview) return;
+        let uiTrans = this.myUITrans;
+        if (uiTrans.width <= 0)
+            return;
+
+        let ts = clamp(this.textLength / uiTrans.width, 0.01, 1);
+        this.node.setScale(
+            this.myScale.x * ts,
+            this.myScale.y * ts,
+            this.myScale.z
+        );
+    }
+
+}

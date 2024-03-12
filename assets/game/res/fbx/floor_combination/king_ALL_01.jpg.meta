@@ -1,0 +1,46 @@
+{
+  "ver": "1.0.25",
+  "importer": "image",
+  "imported": true,
+  "uuid": "335c1578-e65f-4ff7-9aff-f53947050f49",
+  "files": [
+    ".jpg",
+    ".json"
+  ],
+  "subMetas": {
+    "6c48a": {
+      "importer": "texture",
+      "uuid": "335c1578-e65f-4ff7-9aff-f53947050f49@6c48a",
+      "displayName": "king_ALL_01",
+      "id": "6c48a",
+      "name": "texture",
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "anisotropy": 0,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "335c1578-e65f-4ff7-9aff-f53947050f49",
+        "visible": true
+      },
+      "ver": "1.0.22",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "type": "texture",
+    "fixAlphaTransparencyArtifacts": false,
+    "hasAlpha": false,
+    "redirect": "335c1578-e65f-4ff7-9aff-f53947050f49@6c48a",
+    "compressSettings": {
+      "useCompressTexture": true,
+      "presetId": "3bBkNvvTtOT7cEIl90nJdx"
+    }
+  }
+}

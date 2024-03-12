@@ -1,0 +1,279 @@
+
+JP_MG_SceneObj.png
+size: 512,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+685
+  rotate: false
+  xy: 389, 115
+  size: 60, 60
+  orig: 60, 60
+  offset: 0, 0
+  index: -1
+COIN_GRAND_01
+  rotate: false
+  xy: 451, 151
+  size: 44, 45
+  orig: 44, 46
+  offset: 0, 1
+  index: -1
+FG_Glow01_00
+  rotate: false
+  xy: 312, 104
+  size: 75, 144
+  orig: 90, 153
+  offset: 9, 9
+  index: -1
+FX_Good_Blue
+  rotate: true
+  xy: 483, 93
+  size: 19, 27
+  orig: 19, 27
+  offset: 0, 0
+  index: -1
+FX_Good_Green
+  rotate: true
+  xy: 397, 380
+  size: 13, 24
+  orig: 13, 25
+  offset: 0, 0
+  index: -1
+FX_Good_Red
+  rotate: false
+  xy: 490, 243
+  size: 20, 20
+  orig: 20, 20
+  offset: 0, 0
+  index: -1
+FX_Good_Yellow
+  rotate: true
+  xy: 449, 14
+  size: 15, 24
+  orig: 16, 24
+  offset: 0, 0
+  index: -1
+Light_02
+  rotate: false
+  xy: 238, 250
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+Light_04
+  rotate: true
+  xy: 397, 395
+  size: 115, 113
+  orig: 128, 128
+  offset: 4, 7
+  index: -1
+Pig/Break_01
+  rotate: false
+  xy: 451, 114
+  size: 46, 35
+  orig: 47, 36
+  offset: 0, 0
+  index: -1
+Pig/Break_02
+  rotate: false
+  xy: 429, 268
+  size: 18, 28
+  orig: 19, 29
+  offset: 0, 0
+  index: -1
+Pig/Break_03
+  rotate: false
+  xy: 390, 9
+  size: 34, 30
+  orig: 34, 30
+  offset: 0, 0
+  index: -1
+Pig/Break_04
+  rotate: true
+  xy: 390, 41
+  size: 23, 43
+  orig: 25, 44
+  offset: 1, 0
+  index: -1
+Pig/Break_05
+  rotate: false
+  xy: 356, 6
+  size: 32, 32
+  orig: 33, 33
+  offset: 0, 0
+  index: -1
+Pig/Break_06
+  rotate: false
+  xy: 450, 84
+  size: 31, 28
+  orig: 32, 29
+  offset: 1, 1
+  index: -1
+Pig/Break_Shadow
+  rotate: true
+  xy: 281, 62
+  size: 69, 29
+  orig: 72, 32
+  offset: 2, 1
+  index: -1
+Pig/Ear_L
+  rotate: true
+  xy: 278, 2
+  size: 36, 35
+  orig: 41, 37
+  offset: 2, 1
+  index: -1
+Pig/Ear_R
+  rotate: true
+  xy: 426, 10
+  size: 29, 21
+  orig: 32, 23
+  offset: 2, 1
+  index: -1
+Pig/Leg_01
+  rotate: false
+  xy: 449, 31
+  size: 29, 24
+  orig: 33, 27
+  offset: 2, 1
+  index: -1
+Pig/Leg_02
+  rotate: false
+  xy: 315, 6
+  size: 39, 32
+  orig: 42, 34
+  offset: 1, 1
+  index: -1
+Pig/Leg_03
+  rotate: false
+  xy: 450, 57
+  size: 30, 25
+  orig: 33, 29
+  offset: 2, 2
+  index: -1
+Pig/Lv1_Body
+  rotate: false
+  xy: 2, 2
+  size: 127, 105
+  orig: 129, 108
+  offset: 1, 2
+  index: -1
+Pig/Lv3_Body
+  rotate: false
+  xy: 238, 380
+  size: 157, 130
+  orig: 159, 132
+  offset: 1, 1
+  index: -1
+Pig/Lv5_Body
+  rotate: false
+  xy: 2, 109
+  size: 191, 163
+  orig: 193, 165
+  offset: 1, 1
+  index: -1
+Pig/Tail
+  rotate: false
+  xy: 490, 213
+  size: 18, 28
+  orig: 20, 31
+  offset: 1, 2
+  index: -1
+Pig/coins_1
+  rotate: false
+  xy: 390, 66
+  size: 58, 47
+  orig: 60, 50
+  offset: 1, 2
+  index: -1
+Pig/coins_2
+  rotate: true
+  xy: 368, 250
+  size: 46, 59
+  orig: 47, 60
+  offset: 0, 1
+  index: -1
+Pig/coins_3
+  rotate: false
+  xy: 389, 177
+  size: 60, 71
+  orig: 62, 72
+  offset: 1, 1
+  index: -1
+Pig/coins_4
+  rotate: false
+  xy: 449, 334
+  size: 61, 59
+  orig: 63, 61
+  offset: 1, 1
+  index: -1
+Pig/coins_5
+  rotate: false
+  xy: 312, 40
+  size: 76, 62
+  orig: 78, 64
+  offset: 1, 1
+  index: -1
+Pig/coins_6
+  rotate: true
+  xy: 451, 265
+  size: 67, 59
+  orig: 69, 62
+  offset: 1, 2
+  index: -1
+Pig/coins_7
+  rotate: true
+  xy: 368, 298
+  size: 80, 79
+  orig: 81, 81
+  offset: 1, 1
+  index: -1
+Pig/coins_8
+  rotate: false
+  xy: 195, 251
+  size: 38, 21
+  orig: 40, 22
+  offset: 1, 0
+  index: -1
+Pig/pig01_shadow
+  rotate: true
+  xy: 451, 198
+  size: 65, 37
+  orig: 65, 37
+  offset: 0, 0
+  index: -1
+Pig/pig03_shadow
+  rotate: false
+  xy: 196, 3
+  size: 80, 49
+  orig: 82, 50
+  offset: 1, 1
+  index: -1
+Pig/pig05_shadow
+  rotate: true
+  xy: 131, 9
+  size: 98, 63
+  orig: 100, 65
+  offset: 1, 1
+  index: -1
+SmallSpots_02
+  rotate: false
+  xy: 2, 274
+  size: 234, 236
+  orig: 256, 256
+  offset: 9, 11
+  index: -1
+aperture
+  rotate: false
+  xy: 195, 133
+  size: 115, 115
+  orig: 128, 128
+  offset: 7, 6
+  index: -1
+stars_1
+  rotate: false
+  xy: 196, 54
+  size: 83, 77
+  orig: 100, 87
+  offset: 8, 3
+  index: -1

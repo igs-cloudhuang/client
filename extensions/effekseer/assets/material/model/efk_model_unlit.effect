@@ -1,0 +1,35 @@
+// Effect Syntax Guide: https://docs.cocos.com/creator/manual/zh/shader/index.html
+
+CCEffect %{
+  techniques:
+  - name: opaque
+    passes:
+    - vert: model_unlit_vs:vert
+      frag: model_unlit_ps:frag
+      properties: &props
+        fUV: { editor: { visible: false } }
+        fModelColor: { editor: { visible: false } }    
+  - name: transparent
+    passes:
+    - vert: model_unlit_vs:vert
+      frag: model_unlit_ps:frag
+      blendState:
+        targets:
+        - blend: true
+          blendSrc: src_alpha
+          blendDst: one_minus_src_alpha
+          blendSrcAlpha: src_alpha
+          blendDstAlpha: one_minus_src_alpha
+      properties: *props
+}%
+
+CCProgram model_unlit_vs %{
+  precision highp float;
+  #include "../chunk/model_unlit_vs.chunk"
+}%
+
+CCProgram model_unlit_ps %{
+  precision highp float;
+  #include "../chunk/model_unlit_ps.chunk"
+}%
+

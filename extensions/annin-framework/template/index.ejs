@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset='utf-8'>
+  <!--http://www.html5rocks.com/en/mobile/mobifying/-->
+  <meta name='viewport'
+    content='viewport-fit=cover,width=device-width,user-scalable=no,initial-scale=1,minimum-scale=1,maximum-scale=1,minimal-ui=true' />
+
+  <!--https://developer.apple.com/library/safari/documentation/AppleApplications/Reference/SafariHTMLRef/Articles/MetaTags.html-->
+  <meta name='apple-mobile-web-app-capable' content='yes'>
+  <meta name='apple-mobile-web-app-status-bar-style' content='black-translucent'>
+  <meta name='format-detection' content='telephone=no'>
+
+  <!-- force webkit on 360 -->
+  <meta name='renderer' content='webkit' />
+  <meta name='force-rendering' content='webkit' />
+  <!-- force edge on IE -->
+  <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1' />
+  <meta name='msapplication-tap-highlight' content='no'>
+
+  <!-- force full screen on some browser -->
+  <meta name='full-screen' content='yes' />
+  <meta name='x5-fullscreen' content='true' />
+  <meta name='360-fullscreen' content='true' />
+
+  <!--fix fireball/issues/3568ㅓ -->
+  <!--<meta name='browsermode' content='application'>-->
+  <meta name='x5-page-mode' content='app'>
+
+  <!--<link rel='apple-touch-icon' href='.png' />-->
+  <!--<link rel='apple-touch-icon-precomposed' href='.png' />-->
+  <link rel='stylesheet' type='text/css' href='<%= cssUrl %>' />
+  <link rel='icon' href='favicon.ico' />
+</head>
+
+<body style='background-color: rgb(0, 0, 0); position: absolute'>
+  <div id='GameDiv' cc_exact_fit_screen='true'>
+    <div id='Cocos3dGameContainer'>
+      <canvas id='GameCanvas' oncontextmenu='event.preventDefault()' tabindex='99'></canvas>
+    </div>
+  </div>
+  <div id='LogoPage' style='position: absolute; width: 100%; height: 100%; background-color: black;'>
+    <div id='LogoDiv' style='position: absolute; left:50%; top:50%; transform: translate(-50%, -50%)'>
+      <picture id='LogoImage'>
+      <div id='LogoImageProgress1' style='position: absolute; width: 100%; top: 94%; height: 6%; border-radius: 10px;'>
+      </div>
+      <div id='LogoImageProgress2' style='position: absolute; width: 0%; top: 94%; height: 6%; border-radius: 10px;'>
+      </div>
+    </div>
+  </div>
+  <style>
+    @keyframes progress {
+      from {
+        width: 0%;
+      }
+
+      to {
+        width: 100%;
+      }
+    }
+
+    @media screen and (orientation: portrait) {
+      #LogoDiv {
+        height: 13.125vw;
+      }
+    }
+
+    @media screen and (orientation: landscape) {
+      #LogoDiv {
+        height: 13.125vh;
+      }
+    }
+  </style>
+  <script>
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+    const urlParams_get = function (name) {
+      return urlParams.get(name) || '';
+    }
+
+    let myUrl = window.location.toString();
+    let ipFirst = /^http(s)?:\/\/([0-9]{1,3}\.){3}[0-9]{1,3}(:[0-9]+)?\/.*?$/;
+    let isDevEnv = myUrl.indexOf('localhost') != -1 || ipFirst.test(myUrl) == true;
+
+    if (isDevEnv == false) {
+      if (urlParams_get('demo') != 'true') {
+        const report21 = 'https://' + urlParams_get('domain_platform').split('').reverse().join('') + '/webservice/event/user';
+        const params21 = '?UserID=-1&GameID=%gameId%&GameVersion=-1&EventNo=21&EventValue=' + urlParams_get('ssoKey') + '&BrowserSystem=-1&DeviceSystem=-1&CreateTime=' + new Date();
+        let xhr = new XMLHttpRequest();
+        xhr.open('get', report21 + params21);
+        xhr.send();
+      }
+
+      if (urlParams_get('demo') != 'true') {
+        const report95 = 'https://' + urlParams_get('domain_platform').split('').reverse().join('') + '/webservice/event/trigger';
+        const params95 = '?EventID=95&GameVersion=-1&EventStatus=0&BrowserSystem=-1&DeviceSystem=-1&AccountID=-1&ApiId=' + urlParams_get('apiId') + '&SSOKey=' + urlParams_get('ssoKey') + '&GameID=%gameId%&CreateTime=' + new Date();
+        let xhr = new XMLHttpRequest();
+        xhr.open('get', report95 + params95);
+        xhr.send();
+      }
+
+      const logoImageProgress1 = document.getElementById('LogoImageProgress1');
+      const logoImageProgress2 = document.getElementById('LogoImageProgress2');
+      const skin = urlParams_get('skin');
+      const apiId = urlParams_get('apiId');
+      let type = '';
+
+      if (skin != '') {
+        if (skin == '4') {
+          type = 'tada_casino';
+        } else if (skin == '1') {
+          type = 'tada';
+        } else {
+          type = 'jili';
+        }
+      }
+      else {
+        if (apiId == '301') {
+          type = 'tada_casino';
+        } else if (apiId == '3' || urlParams_get('gs').toLowerCase().indexOf('adat') >= 0 || urlParams_get('tadaSkin') == '1') {
+          type = 'tada';
+        } else {
+          type = 'jili';
+        }
+      }
+
+      const setImage = function (name) {
+        const logoImage = document.getElementById('LogoImage');
+        var sc0 = document.createElement("source");
+        var sc1 = document.createElement("source");
+        var sc2 = document.createElement("source");
+        var img = document.createElement("img");
+
+        sc0.srcset = `../logo/${name}.mp4`;
+        sc0.type = "video/mp4";
+        sc1.srcset = `../logo/${name}.avif`;
+        sc1.type = "image/avif";
+        sc2.srcset = `../logo/${name}.webp`;
+        sc2.type = "image/webp";
+        img.src = `../logo/${name}.png`;
+        img.style = 'height: 83%';
+
+        logoImage.appendChild(sc0);
+        logoImage.appendChild(sc1);
+        logoImage.appendChild(sc2);
+        logoImage.appendChild(img);
+      }
+
+
+      if (type == 'jili') {
+        document.title = %jiliTitle%;
+        setImage('jili_20231227');
+        logoImageProgress1.style.backgroundColor = 'rgb(45, 38, 28)';
+        logoImageProgress2.style.backgroundColor = 'rgb(219, 177, 76)';
+      }
+      else if (type == 'tada' || type == 'tada_casino') {
+        document.title = %tadaTitle%;
+
+        if (type == 'tada') {
+          setImage('tada_20221227')
+        } else {
+          setImage('tada_20230316')
+        }
+        logoImageProgress1.style.backgroundColor = 'rgb(35, 35, 35)';
+        logoImageProgress2.style.backgroundColor = 'rgb(255, 130, 0)';
+      }
+
+      logoImageProgress2.style.animationName = 'progress';
+      logoImageProgress2.style.animationDuration = '2s';
+      logoImageProgress2.style.animationTimingFunction = 'ease-out';
+      logoImageProgress2.style.animationFillMode = 'forwards';
+
+      window.bootTimestamp = new Date();
+      window.logoTimer = Date.now();
+    }
+
+    if (isDevEnv == true) {
+      window.bootTimestamp = new Date();
+    }
+  </script>
+  <%- include(cocosTemplate, {}) %>
+</body>
+
+</html>

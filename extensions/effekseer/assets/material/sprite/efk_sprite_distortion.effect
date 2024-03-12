@@ -1,0 +1,35 @@
+// Effect Syntax Guide: https://docs.cocos.com/creator/manual/zh/shader/index.html
+
+CCEffect %{
+  techniques:
+  - name: opaque
+    passes:
+    - vert: sprite_distortion_vs:vert
+      frag: model_distortion_ps:frag
+      properties: &props
+        g_scale: { editor: { visible: false } }
+        mCameraProj: { editor: { visible: false } }
+  - name: transparent
+    passes:
+    - vert: sprite_distortion_vs:vert
+      frag: model_distortion_ps:frag
+      blendState:
+        targets:
+        - blend: true
+          blendSrc: src_alpha
+          blendDst: one_minus_src_alpha
+          blendSrcAlpha: src_alpha
+          blendDstAlpha: one_minus_src_alpha
+      properties: *props
+}%
+
+CCProgram sprite_distortion_vs %{
+  precision highp float;
+  #include "../chunk/sprite_distortion_vs.chunk"
+}%
+
+CCProgram model_distortion_ps %{
+  precision highp float;
+  #include "../chunk/model_distortion_ps.chunk"
+}%
+

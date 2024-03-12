@@ -1,0 +1,311 @@
+{
+  "ver": "2.3.1",
+  "importer": "fbx",
+  "imported": true,
+  "uuid": "aa69aaaf-73eb-4925-b99f-80c368cf86ed",
+  "files": [
+    "__original-animation-0.cconb",
+    "__original-animation-1.cconb",
+    "__original-animation-2.cconb"
+  ],
+  "subMetas": {
+    "935af": {
+      "importer": "gltf-mesh",
+      "uuid": "aa69aaaf-73eb-4925-b99f-80c368cf86ed@935af",
+      "displayName": "",
+      "id": "935af",
+      "name": "prize wheel.mesh",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.1.0",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "1f586": {
+      "importer": "gltf-animation",
+      "uuid": "aa69aaaf-73eb-4925-b99f-80c368cf86ed@1f586",
+      "displayName": "",
+      "id": "1f586",
+      "name": "idle.animation",
+      "userData": {
+        "gltfIndex": 0,
+        "wrapMode": 2,
+        "sample": 30,
+        "span": {
+          "from": 0,
+          "to": 13.333333015441895
+        },
+        "events": []
+      },
+      "ver": "1.0.16",
+      "imported": true,
+      "files": [
+        ".cconb"
+      ],
+      "subMetas": {}
+    },
+    "79e35": {
+      "importer": "gltf-animation",
+      "uuid": "aa69aaaf-73eb-4925-b99f-80c368cf86ed@79e35",
+      "displayName": "",
+      "id": "79e35",
+      "name": "hit.animation",
+      "userData": {
+        "gltfIndex": 1,
+        "wrapMode": 2,
+        "sample": 30,
+        "span": {
+          "from": 0,
+          "to": 3
+        },
+        "events": []
+      },
+      "ver": "1.0.16",
+      "imported": true,
+      "files": [
+        ".cconb"
+      ],
+      "subMetas": {}
+    },
+    "130ce": {
+      "importer": "gltf-animation",
+      "uuid": "aa69aaaf-73eb-4925-b99f-80c368cf86ed@130ce",
+      "displayName": "",
+      "id": "130ce",
+      "name": "Dead.animation",
+      "userData": {
+        "gltfIndex": 2,
+        "wrapMode": 2,
+        "sample": 30,
+        "span": {
+          "from": 0,
+          "to": 0.5
+        },
+        "events": []
+      },
+      "ver": "1.0.16",
+      "imported": true,
+      "files": [
+        ".cconb"
+      ],
+      "subMetas": {}
+    },
+    "438fe": {
+      "importer": "gltf-skeleton",
+      "uuid": "aa69aaaf-73eb-4925-b99f-80c368cf86ed@438fe",
+      "displayName": "",
+      "id": "438fe",
+      "name": "UnnamedSkeleton.skeleton",
+      "userData": {
+        "gltfIndex": 0,
+        "jointsLength": 2
+      },
+      "ver": "1.0.1",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "ff5d5": {
+      "importer": "gltf-embeded-image",
+      "uuid": "aa69aaaf-73eb-4925-b99f-80c368cf86ed@ff5d5",
+      "displayName": "",
+      "id": "ff5d5",
+      "name": "prize wheel.image",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.3",
+      "imported": true,
+      "files": [
+        ".jpg",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "bfc01": {
+      "importer": "texture",
+      "uuid": "aa69aaaf-73eb-4925-b99f-80c368cf86ed@bfc01",
+      "displayName": "",
+      "id": "bfc01",
+      "name": "prize wheel.texture",
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "anisotropy": 0,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "aa69aaaf-73eb-4925-b99f-80c368cf86ed@ff5d5"
+      },
+      "ver": "1.0.22",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "a54b7": {
+      "importer": "gltf-material",
+      "uuid": "aa69aaaf-73eb-4925-b99f-80c368cf86ed@a54b7",
+      "displayName": "",
+      "id": "a54b7",
+      "name": "prize wheel.material",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "52fcd": {
+      "importer": "gltf-scene",
+      "uuid": "aa69aaaf-73eb-4925-b99f-80c368cf86ed@52fcd",
+      "displayName": "",
+      "id": "52fcd",
+      "name": "prize_wheel.prefab",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.12",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "imageMetas": [
+      {
+        "name": "prize wheel",
+        "uri": "aa69aaaf-73eb-4925-b99f-80c368cf86ed@ff5d5"
+      }
+    ],
+    "fbx": {
+      "smartMaterialEnabled": true
+    },
+    "animationImportSettings": [
+      {
+        "name": "idle",
+        "duration": 13.333333015441895,
+        "fps": 30,
+        "splits": [
+          {
+            "name": "idle",
+            "from": 0,
+            "to": 13.333333015441895,
+            "wrapMode": 2
+          }
+        ]
+      },
+      {
+        "name": "hit",
+        "duration": 3,
+        "fps": 30,
+        "splits": [
+          {
+            "name": "hit",
+            "from": 0,
+            "to": 3,
+            "wrapMode": 2
+          }
+        ]
+      },
+      {
+        "name": "Dead",
+        "duration": 0.5,
+        "fps": 30,
+        "splits": [
+          {
+            "name": "Dead",
+            "from": 0,
+            "to": 0.5,
+            "wrapMode": 2
+          }
+        ]
+      }
+    ],
+    "redirect": "aa69aaaf-73eb-4925-b99f-80c368cf86ed@52fcd",
+    "assetFinder": {
+      "meshes": [
+        "aa69aaaf-73eb-4925-b99f-80c368cf86ed@935af"
+      ],
+      "skeletons": [
+        "aa69aaaf-73eb-4925-b99f-80c368cf86ed@438fe"
+      ],
+      "textures": [
+        "aa69aaaf-73eb-4925-b99f-80c368cf86ed@bfc01"
+      ],
+      "materials": [
+        "aa69aaaf-73eb-4925-b99f-80c368cf86ed@a54b7"
+      ],
+      "scenes": [
+        "aa69aaaf-73eb-4925-b99f-80c368cf86ed@52fcd"
+      ]
+    },
+    "materials": {
+      "aa69aaaf-73eb-4925-b99f-80c368cf86ed@a54b7": {
+        "__type__": "cc.Material",
+        "_name": "",
+        "_objFlags": 0,
+        "_native": "",
+        "_effectAsset": {
+          "__uuid__": "68c178aa-46c0-4608-b4d9-45b4e6c7b58d",
+          "__expectedType__": "cc.EffectAsset"
+        },
+        "_techIdx": 0,
+        "_defines": [
+          {
+            "USE_TEXTURE": true,
+            "USE_BLEACH_COLOR": true
+          },
+          {}
+        ],
+        "_states": [
+          {
+            "rasterizerState": {},
+            "depthStencilState": {},
+            "blendState": {
+              "targets": [
+                {
+                  "blend": true,
+                  "blendSrc": 2,
+                  "blendDst": 4
+                }
+              ]
+            }
+          },
+          {
+            "rasterizerState": {},
+            "depthStencilState": {},
+            "blendState": {
+              "targets": [
+                {}
+              ]
+            }
+          }
+        ],
+        "_props": [
+          {
+            "mainTexture": {
+              "__uuid__": "7ffce52c-33c3-4ba6-bad1-20589fef2c8a@6c48a",
+              "__expectedType__": "cc.Texture2D"
+            }
+          },
+          {}
+        ]
+      }
+    }
+  }
+}

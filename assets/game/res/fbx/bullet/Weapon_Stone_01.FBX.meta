@@ -1,0 +1,159 @@
+{
+  "ver": "2.3.1",
+  "importer": "fbx",
+  "imported": true,
+  "uuid": "aa023c7a-c7a3-4f6b-8dba-0df8329abf01",
+  "files": [],
+  "subMetas": {
+    "4e94a": {
+      "importer": "gltf-mesh",
+      "uuid": "aa023c7a-c7a3-4f6b-8dba-0df8329abf01@4e94a",
+      "displayName": "",
+      "id": "4e94a",
+      "name": "Sphere012.mesh",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.1.0",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "320af": {
+      "importer": "texture",
+      "uuid": "aa023c7a-c7a3-4f6b-8dba-0df8329abf01@320af",
+      "displayName": "",
+      "id": "320af",
+      "name": "Map #54.texture",
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "anisotropy": 0,
+        "isUuid": false,
+        "imageUuidOrDatabaseUri": "db://assets/game/res/fbx/bullet/Weapon_missile_01.jpg"
+      },
+      "ver": "1.0.22",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "c2db9": {
+      "importer": "gltf-material",
+      "uuid": "aa023c7a-c7a3-4f6b-8dba-0df8329abf01@c2db9",
+      "displayName": "",
+      "id": "c2db9",
+      "name": "Material #429.material",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "c8748": {
+      "importer": "gltf-scene",
+      "uuid": "aa023c7a-c7a3-4f6b-8dba-0df8329abf01@c8748",
+      "displayName": "",
+      "id": "c8748",
+      "name": "Weapon_Stone_01.prefab",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.12",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "imageMetas": [
+      {
+        "name": "Map #54",
+        "uri": "db://assets/game/res/fbx/bullet/Weapon_missile_01.jpg"
+      }
+    ],
+    "fbx": {
+      "smartMaterialEnabled": true
+    },
+    "redirect": "aa023c7a-c7a3-4f6b-8dba-0df8329abf01@c8748",
+    "assetFinder": {
+      "meshes": [
+        "aa023c7a-c7a3-4f6b-8dba-0df8329abf01@4e94a"
+      ],
+      "skeletons": [],
+      "textures": [
+        "aa023c7a-c7a3-4f6b-8dba-0df8329abf01@320af"
+      ],
+      "materials": [
+        "aa023c7a-c7a3-4f6b-8dba-0df8329abf01@c2db9"
+      ],
+      "scenes": [
+        "aa023c7a-c7a3-4f6b-8dba-0df8329abf01@c8748"
+      ]
+    },
+    "materials": {
+      "aa023c7a-c7a3-4f6b-8dba-0df8329abf01@c2db9": {
+        "__type__": "cc.Material",
+        "_name": "",
+        "_objFlags": 0,
+        "_native": "",
+        "_effectAsset": {
+          "__uuid__": "68c178aa-46c0-4608-b4d9-45b4e6c7b58d",
+          "__expectedType__": "cc.EffectAsset"
+        },
+        "_techIdx": "0",
+        "_defines": [
+          {
+            "USE_INSTANCING": true,
+            "USE_TEXTURE": true,
+            "USE_BLEACH_COLOR": true
+          },
+          {}
+        ],
+        "_states": [
+          {
+            "rasterizerState": {},
+            "depthStencilState": {},
+            "blendState": {
+              "targets": [
+                {}
+              ]
+            }
+          },
+          {
+            "rasterizerState": {},
+            "depthStencilState": {},
+            "blendState": {
+              "targets": [
+                {}
+              ]
+            }
+          }
+        ],
+        "_props": [
+          {
+            "mainTexture": {
+              "__uuid__": "fa99aef5-006e-48cd-99dc-33d8544787ad@6c48a",
+              "__expectedType__": "cc.Texture2D"
+            }
+          },
+          {}
+        ]
+      }
+    },
+    "tangents": 0
+  }
+}

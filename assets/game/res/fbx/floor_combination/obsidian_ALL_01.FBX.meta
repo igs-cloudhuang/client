@@ -1,0 +1,175 @@
+{
+  "ver": "2.3.1",
+  "importer": "fbx",
+  "imported": true,
+  "uuid": "14091a3c-433c-4833-b19d-c580506156f7",
+  "files": [],
+  "subMetas": {
+    "54314": {
+      "importer": "gltf-mesh",
+      "uuid": "14091a3c-433c-4833-b19d-c580506156f7@54314",
+      "displayName": "",
+      "id": "54314",
+      "name": "obsidian_color.mesh",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.1.0",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "d4f45": {
+      "importer": "gltf-embeded-image",
+      "uuid": "14091a3c-433c-4833-b19d-c580506156f7@d4f45",
+      "displayName": "",
+      "id": "d4f45",
+      "name": "Map #2.image",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.3",
+      "imported": true,
+      "files": [
+        ".json",
+        ".png"
+      ],
+      "subMetas": {}
+    },
+    "1da29": {
+      "importer": "texture",
+      "uuid": "14091a3c-433c-4833-b19d-c580506156f7@1da29",
+      "displayName": "",
+      "id": "1da29",
+      "name": "Map #2.texture",
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "anisotropy": 0,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "14091a3c-433c-4833-b19d-c580506156f7@d4f45"
+      },
+      "ver": "1.0.22",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "e9711": {
+      "importer": "gltf-material",
+      "uuid": "14091a3c-433c-4833-b19d-c580506156f7@e9711",
+      "displayName": "",
+      "id": "e9711",
+      "name": "obsidian_ALL.material",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "e0ce9": {
+      "importer": "gltf-scene",
+      "uuid": "14091a3c-433c-4833-b19d-c580506156f7@e0ce9",
+      "displayName": "",
+      "id": "e0ce9",
+      "name": "obsidian_ALL_01.prefab",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.12",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "imageMetas": [
+      {
+        "name": "Map #2",
+        "uri": "14091a3c-433c-4833-b19d-c580506156f7@d4f45"
+      }
+    ],
+    "fbx": {
+      "smartMaterialEnabled": true
+    },
+    "redirect": "14091a3c-433c-4833-b19d-c580506156f7@e0ce9",
+    "assetFinder": {
+      "meshes": [
+        "14091a3c-433c-4833-b19d-c580506156f7@54314"
+      ],
+      "skeletons": [],
+      "textures": [
+        "14091a3c-433c-4833-b19d-c580506156f7@1da29"
+      ],
+      "materials": [
+        "14091a3c-433c-4833-b19d-c580506156f7@e9711"
+      ],
+      "scenes": [
+        "14091a3c-433c-4833-b19d-c580506156f7@e0ce9"
+      ]
+    },
+    "materials": {
+      "14091a3c-433c-4833-b19d-c580506156f7@e9711": {
+        "__type__": "cc.Material",
+        "_name": "",
+        "_objFlags": 0,
+        "_native": "",
+        "_effectAsset": {
+          "__uuid__": "68c178aa-46c0-4608-b4d9-45b4e6c7b58d",
+          "__expectedType__": "cc.EffectAsset"
+        },
+        "_techIdx": 0,
+        "_defines": [
+          {
+            "USE_TEXTURE": true,
+            "USE_BLEACH_COLOR": true
+          },
+          {}
+        ],
+        "_states": [
+          {
+            "rasterizerState": {},
+            "depthStencilState": {},
+            "blendState": {
+              "targets": [
+                {}
+              ]
+            }
+          },
+          {
+            "rasterizerState": {},
+            "depthStencilState": {},
+            "blendState": {
+              "targets": [
+                {}
+              ]
+            }
+          }
+        ],
+        "_props": [
+          {
+            "mainTexture": {
+              "__uuid__": "e5ae04ec-227d-453d-b45c-466591fbc66e@6c48a",
+              "__expectedType__": "cc.Texture2D"
+            }
+          },
+          {}
+        ]
+      }
+    },
+    "tangents": 0
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "name": "client",
+  "type": "3d",
+  "uuid": "db8973a9-c45e-4aae-bd59-ce282dcfda68",
+  "version": "3.6.2",
+  "creator": {
+    "version": "3.6.2"
+  },
+  "dependencies": {}
+}

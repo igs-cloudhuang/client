@@ -1,0 +1,878 @@
+import prot from '../network/protocol/protocol.js';
+import { _decorator, Component, Animation, Label, Node, Button, Sprite, SpriteFrame, Event, sys, tween, UIOpacity, log, Tween, v3, input, Input } from 'cc';
+import { Bus, BusEvent, BusIframeEvent, Comm } from 'db://annin-framework/system';
+import { appManager, backpackManager, bufferType, soundManager, vipwebManager, walletManager } from 'db://annin-framework/manager';
+import { cleanNum, find, playAnime, transUIPos } from 'db://annin-framework/utils';
+import { SwitchOffKeyDefine } from 'db://annin-framework/license/LicenseSetting';
+import WebPage from 'db://annin-framework/components/webpage';
+import { SceneEvent, SoundName } from '../gameplay/GameDefine';
+import ChangeSceneByRunCamera from '../gameplay/ChangeSceneByRunCamera';
+import FrostDragonAction from '../gameplay/FrostDragonAction';
+import BetChooseList from '../gameplay/BetChooseList';
+import ChangeCoinSprite from '../gameplay/ChangeCoinSprite';
+import { delay } from '../system/ToolBox';
+import Game from '../system/Game';
+
+const { ccclass, property } = _decorator;
+
+@ccclass('UICtrl')
+export default class UICtrl extends Component {
+
+    @property(Animation)
+    toolUIAnim: Animation = null;
+
+    @property([SpriteFrame])
+    sndUIFrames: SpriteFrame[] = [];
+
+    @property([SpriteFrame])
+    effectUIFrames: SpriteFrame[] = [];
+
+    @property(Sprite)
+    sndSpr: Sprite = null;
+
+    @property(Sprite)
+    effectSpr: Sprite = null;
+
+    @property(Label)
+    totalShootStr: Label = null;
+
+    @property(Node)
+    totalShootText: Node = null;
+
+    @property(Label)
+    TorpedoCoinStr: Label = null;
+
+    @property(Label)
+    sessionStr: Label = null;
+
+    @property(Node)
+    TorpedoCoinBg: Node = null;
+
+    @property(Node)
+    toolButton: Node = null;
+
+    @property(Node)
+    toolButtonTouch: Node = null;
+
+    @property(Node)
+    betList: Node = null;
+
+    @property(Button)
+    betBtn: Button = null;
+
+    @property(Button)
+    nextBtn: Button = null;
+
+    @property(Button)
+    torpedoBtn: Button = null;
+
+    @property(Button)
+    autoBtn: Button = null;
+
+    @property(Button)
+    startBtn: Button = null;
+
+    @property(Node)
+    treasureHideGroup: Node[] = [];
+
+    @property(Node)
+    FeaturesHideGroup: Node[] = [];
+
+    @property(Label)
+    TopOdds: Label = null;
+
+    @property(Node)
+    BonusGameGroupUI: Node[] = [];
+
+    @property(Node)
+    BetGroupUI: Node[] = [];
+
+    @property(Node)
+    playerCoinNode: Node = null;
+
+    @property(Node)
+    featuresNode: Node = null;
+
+    @property([Node])
+    featuresBtnNode: Node[] = [];
+
+    @property(Node)
+    piggyNode: Node = null;
+
+    @property(Sprite)
+    bonusCardSpr: Sprite = null;
+
+    @property(Button)
+    reportBtn: Button = null;
+
+    @property(WebPage)
+    webPage: WebPage = null;
+
+    @property(Sprite)
+    vipSpr: Sprite = null;
+
+    /** 多幣別轉換顯示 */
+    @property(ChangeCoinSprite)
+    private coinSprite: ChangeCoinSprite[] = [];
+    private isToolOpen = false;
+    private toolAutoClose = null as Tween<Node>;
+
+    onLoad() {
+        Game.uiCtrl = this;
+        this.reportBtn.node.active = appManager.checkSwitchOn(SwitchOffKeyDefine.GameHistory);
+
+        Bus.always(BusEvent.ItemUsed, this.itemUsed, this);     // 道具卡事件監聽
+        Bus.always(BusIframeEvent.stopAutoplay, this.iframeStopAutoPlay, this);
+        Bus.always(BusEvent.PlayFeatureGame, this.playFeatureGame, this);
+        Bus.always(BusEvent.LowDeviceChange, this.setLowLevelDevice, this);
+    }
+
+    start() {
+        vipwebManager.setVipSprUpdate(this.vipSpr);
+        this.sndSpr.spriteFrame = this.sndUIFrames[soundManager.isMusicEnabled() ? 0 : 1];
+        this.effectSpr.spriteFrame = this.effectUIFrames[Comm.state.isLowLevelDevice? 1 : 0];
+
+        // todo: 全部住解要再檢查
+        
+        // this.sndSprite = find('Sound', this.toolUIAnim, Sprite);
+
+        this.setPiggyBtn(true);
+        this.setFeaturesBtn(false);
+    }
+
+    onDestroy() {
+        if (!sys.isMobile) {
+            input.off(Input.EventType.KEY_DOWN);  // clean up
+            input.off(Input.EventType.KEY_UP);  // clean up
+        }
+
+        Bus.cancel(BusEvent.GameDisplay, this.itemUsed, this);
+        Bus.cancel(BusIframeEvent.stopAutoplay, this.iframeStopAutoPlay, this);
+        Bus.cancel(BusEvent.PlayFeatureGame, this.playFeatureGame, this);
+        Bus.cancel(BusEvent.LowDeviceChange, this.setLowLevelDevice, this);
+
+        vipwebManager?.clearVipSprUpdate(this.vipSpr);
+        Game.uiCtrl = null;
+    }
+
+    /**
+     * 各類按鈕響應
+     */
+    toolEvent(e: Event, data: string, playSnd: boolean = true) {
+        if (playSnd) {
+            soundManager.playEffect(SoundName.button01);
+        }
+        switch (data) {
+            case 'ToolUI': {
+                this.toolUIOnClick(!this.isToolOpen);  // 左側功能鍵
+                break;
+            }
+            case 'Menu': {
+                this.menuOnClick();  // 說明頁按鈕
+                break;
+            }
+            case 'Report': {
+                this.reportOnClick();  // 報表按鈕
+                break;
+            }
+            case 'Intro': {
+                this.introOnClick();  // 特色按鈕
+                break;
+            }
+            case 'Pig': {
+                this.introOnClick_Pig();  // 特色按鈕
+                break;
+            }
+            case 'Sound': {
+                this.soundOnClick();  // 聲音按鈕
+                break;
+            }
+            case 'Effect': {
+                Comm.state.isLowLevelDevice = !Comm.state.isLowLevelDevice;
+                Bus.depart(BusEvent.LowDeviceChange);
+                break;
+            }
+            case 'Torpedo': {
+                this.switchShootState('Torpedo');  // 魚雷按鈕
+                break;
+            }
+            case 'Giveup': {
+                // this.giveupFish();
+                this.features2(false);
+                break;
+            }
+            case 'showBet': {
+                this.showBet();
+                break;
+            }
+            case 'AutoMatic': {
+                this.switchShootState('AutoMatic');  // 魚雷按鈕
+                break;
+            }
+            // 漏網之魚
+            default: {
+                log('toolEvent case is not found, ' + `name = ${data}.`);
+            }
+        }
+    }
+
+    /**
+     * 左側功能鍵
+     */
+    toolUIOnClick(toggle: boolean) {
+        if (this.isToolOpen !== toggle) {
+            playAnime(this.toolUIAnim, toggle ? 'Tools_In' : 'Tools_Out');
+            this.isToolOpen = toggle;
+        }
+        if (this.toolAutoClose) {
+            this.toolAutoClose.stop();  // 取消自動關閉
+            this.toolAutoClose = null;
+        }
+        if (this.isToolOpen) {
+            this.toolAutoClose = tween(this.node)
+                .delay(4).call(() => {
+                    if (this.isToolOpen) this.toolUIOnClick(false);
+                })
+                .start();
+        }
+    }
+
+    /**
+     * 說明頁按鈕
+     */
+    menuOnClick() {
+        this.webPage.showIntro();
+    }
+
+    /**
+     * 報表按鈕
+     */
+    reportOnClick() {
+        this.webPage.showReport();
+    }
+
+    /**
+     * 特色按鈕
+     */
+    introOnClick() {
+        this.webPage.showIntro();
+    }
+
+    /**
+     * 特色按鈕
+     */
+    introOnClick_Pig() {
+        // this.introOnClick('#freegame');
+        this.introOnClick();
+
+        let gameid = appManager.gameID;
+        sys.localStorage.setItem(`Piggy_${gameid}`, '1');
+        this.setPiggyBtn(false);
+
+        appManager.sendButton(appManager.button_Log.Button_lobby_introOn_Pig);
+    }
+
+    /**
+     * 聲音按鈕
+     */
+    soundOnClick() {
+        if (soundManager.isMusicEnabled()) {
+            // 靜音
+            this.sndSpr.spriteFrame = this.sndUIFrames[1];
+            appManager.sendButton(appManager.button_Log.Button_game_tool_soundOn);
+            soundManager.enableMusic(false);
+            soundManager.enableEffect(false);
+        }
+        else {
+            // 播放
+            this.sndSpr.spriteFrame = this.sndUIFrames[0];
+            appManager.sendButton(appManager.button_Log.Button_game_tool_soundOff);
+            soundManager.enableMusic(true);
+            soundManager.enableEffect(true);
+        }
+    }
+
+    /**
+     * 低配按鈕
+     */
+    setLowLevelDevice() {
+        sys.localStorage.setItem(`IsLowLevelDevice_${appManager.gameID}`, Comm.state.isLowLevelDevice ? "1" : "");
+        if (Comm.state.isLowLevelDevice) {
+            appManager.sendButton(appManager.button_Log.Button_game_tool_effectConfirm);
+        }
+        else {
+            appManager.sendButton(appManager.button_Log.Button_game_tool_effectCancal);
+        }
+        this.effectSpr.spriteFrame = this.effectUIFrames[Comm.state.isLowLevelDevice? 1 : 0];
+    }
+
+    /**
+     * 切換開關的動畫控制
+     * @param type 按鈕 keyword
+     * @param toggle flag
+     */
+    switchChipState(type: string, toggle: boolean) {
+        // let text = find('ItemPanel/Label/' + type, comm.node.buttonLayer);
+        let node = find(Game.node.buttonLayer, 'RightPanel/Button/' + type);
+        let anim = node?.getComponent(Animation);
+
+        // text.scale = toggle ? 1.1 : 1.0;
+        // node.scale = toggle ? 1.1 : 1.0;
+
+        if (toggle) {
+            let clip = anim.defaultClip;
+            if (clip) {
+                let state = anim.getState(clip.name);
+                if (!state.isPlaying)
+                    anim.play(clip.name);
+            }
+        }
+        else {
+            anim.stop();
+            node.children.forEach(chd => {
+                if (chd.name !== 'Touch') chd.active = false;
+            });
+        }
+    }
+
+    switchAutoChipState(toggle: boolean) {
+        let node = find(Game.node.buttonUpperLayer, 'BottomPanel/Auto/auto');
+        node.active = !toggle;
+
+        let node2 = find(Game.node.buttonUpperLayer, 'BottomPanel/Auto/stop');
+        node2.active = toggle;
+
+        // this.setNextBtnInteractable(!toggle);
+    }
+
+    /**
+     * 切換各種射擊功能的開關
+     */
+    switchShootState(shootType: string) {
+        switch (shootType) {
+            case 'Torpedo': {
+                if (Game.shootMgr.isTorpedo) {
+                    this.switchChipState('Torpedo', false);
+                    this.setTorpedoCoin(Game.main.getTurret().getBet() * Game.shootMgr.torpedoHitCount);
+                    Game.shootMgr.setButtonSwitch('TorpedoOff');
+                    appManager.sendButton(appManager.button_Log.Button_game_TorpedoOff);
+                }
+                else {
+                    this.switchChipState('Torpedo', true);
+                    this.setTorpedoCoin(Game.main.getTurret().getBet() * Game.shootMgr.torpedoHitCount);
+                    Game.shootMgr.setButtonSwitch('TorpedoOn');
+                    appManager.sendButton(appManager.button_Log.Button_game_TorpedoOn);
+                }
+                break;
+            }
+            case 'AutoMatic': {
+                if (Game.shootMgr.isAutoMatic) {
+                    // this.switchChipState('AutoMatic', false);
+                    Game.shootMgr.setButtonSwitch('AutoMaticOff');
+                    appManager.sendButton(appManager.button_Log.Button_game_AutoMaticOff);
+                }
+                else {
+                    Game.shootMgr.setButtonSwitch('AutoMaticOn');
+                    appManager.sendButton(appManager.button_Log.Button_game_AutoMaticOn);
+                }
+                break;
+            }
+        }
+    }
+
+     /**
+     * 顯示魚雷價格
+     * @param num 
+     */
+    setTorpedoCoin(num: number) {
+        this.TorpedoCoinStr.string = walletManager.FormatCoinNum(num);
+        this.TorpedoCoinStr.node.active = (num > 0);
+        this.TorpedoCoinBg.active = (num > 0);
+        // this.TorpedoStr.active = (num > 0);
+    }
+
+    setSession(str: string) {
+        this.sessionStr.string = str;
+    }
+
+    giveupFish() {
+        let turret = Game.main.getTurret();
+        if (turret) {
+            if (!turret.isLocked()) {
+                if (Game.bgMgr.isEventOfScene(SceneEvent.PigCoin) == false &&
+                    Game.bgMgr.isEventOfScene(SceneEvent.Treasure) == false) {
+                    let fish = Game.fishMgr.getFishTower(0);
+                    if (fish) {
+                        Game.main.C2S_Giveup(0, [fish.getFishId()]);
+                        Game.effectMgr.playGiveup(fish);
+                        soundManager.playEffect(SoundName.flash);
+                        Game.fishMgr.delFish(fish, false, true);
+                        appManager.sendButton(appManager.button_Log.Button_game_giveup, fish.getFishNo().toString());
+                    }
+                }
+            }
+        }
+    }
+
+    showBet() {
+        let bets = Game.main.getTurret().getBets();
+
+        let list = this.betList.getComponent(BetChooseList);
+        if (list) {
+            list.init(bets);
+            list.setActive();
+        }
+    }
+
+    setBetList() {
+        let list = this.betList.getComponent(BetChooseList);
+        if (list) {
+            list.setActiveFalse();
+        }
+    }
+
+    setTopOdd(str: string) {
+        if (Game.bgMgr.isEventOfScene(SceneEvent.PigCoin) == false &&
+            Game.bgMgr.isEventOfScene(SceneEvent.Treasure) == false) {
+            Game.uiCtrl.setOddsBoardActive(true);
+        }
+        this.TopOdds.string = str;
+    }
+
+    setOddsBoardActive(ok: boolean) {
+        if (this.TopOdds) {
+            this.TopOdds.node.parent.active = ok;
+        }
+    }
+
+    setBonusGameCountActive(ok: boolean, icon: number = 0) {
+        this.BonusGameGroupUI.forEach(node => {
+            node.active = ok;
+        })
+
+        // 離開時如果道具卡亮著，就關掉
+        if (!ok) {
+            if (this.bonusCardSpr.node.active) {
+                backpackManager.showUsingItemEnd(true);
+                backpackManager.getItemInfo();
+            }
+        }
+
+        this.bonusCardSpr.node.active = false;
+
+        if (ok && icon > 0) {
+            this.bonusCardSpr.node.active = true;
+        }
+    }
+
+    getBonusGameCountPos() {
+        return this.BonusGameGroupUI[0]? transUIPos(Game.node.uiLayer, this.BonusGameGroupUI[0]) : v3(0, 0);
+    }
+
+    setBetGroupActive(ok: boolean) {
+        if (this.BetGroupUI[0]) { this.BetGroupUI[0].active = ok; }
+        for (let i = 1; i < this.BetGroupUI.length; ++i) {
+            if (this.BetGroupUI[i]) { this.BetGroupUI[i].active = !ok; }
+        }
+    }
+    
+    /**
+     * 顯示剩餘射擊次數
+     * @param num 
+     */
+    setShootCount(num: number) {
+        this.totalShootStr.string = num.toString();
+        this.totalShootStr.node.active = (num > 0);
+        let pos = this.totalShootStr.node.active? v3(-3.5, 24, 0) : v3(-3.5, 14, 0);
+        this.totalShootText.setPosition(pos);
+    }
+
+    /**
+     * 設定BET切換狀態
+     * @param ok 
+     */
+    setBetBtnInteractable(ok: boolean) {
+        // this.betBtn.enableAutoGrayEffect = true;
+        this.betBtn.getComponent(Sprite).grayscale = !ok;
+        this.betBtn.interactable = ok;
+    }
+
+    /**
+     * 設定下一個切換狀態
+     * @param ok 
+     */
+    setNextBtnInteractable(ok: boolean) {
+        // if (ok) {
+        //     ok = comm.bgMgr.isEventOfScene(game.SceneEvent.PigCoin) || !comm.shootMgr.isAutoMatic;
+        // }
+        // this.nextBtn.enableAutoGrayEffect = true;
+        // this.nextBtn.getComponent(Sprite).grayscale = !ok;
+        this.nextBtn.interactable = ok;
+    }
+
+    /**
+     * 設定torpedo切換狀態
+     * @param ok 
+     */
+    setTorpedoBtnInteractable(ok: boolean) {
+        // this.torpedoBtn.enableAutoGrayEffect = true;
+        // this.torpedoBtn.getComponent(Sprite).grayscale = !ok;
+        this.torpedoBtn.interactable = ok;
+    }
+
+    /**
+     * 設定start切換狀態
+     * @param ok 
+     */
+    setStartBtnInteractable(ok: boolean) {
+        // this.startBtn.enableAutoGrayEffect = true;
+        this.startBtn.getComponent(Sprite).grayscale = !ok;
+        this.startBtn.interactable = ok;
+    }
+
+    setAutoBtnInteractable(ok: boolean) {
+        this.autoBtn.getComponent(Sprite).grayscale = !ok;
+        this.autoBtn.interactable = ok;
+    }
+
+    /**
+     * 寶藏庫要隱藏的按鈕
+     * @param ok 
+     */
+    setBtnsInTreasure(ok: boolean) {
+        this.treasureHideGroup.forEach(node => {
+            node.active = ok;
+        })
+        this.nextBtn.node.active = ok;
+
+        let turret = Game.main.getTurret();
+        if (turret) {
+            if (ok) {
+                if (Game.shootMgr.isTorpedo) {
+                    Game.uiCtrl.setTorpedoCoin(turret.getBet() * Game.shootMgr.torpedoHitCount);
+                }
+            } else {
+                Game.uiCtrl.setTorpedoCoin(0);
+            }
+        }
+    }
+
+    /**
+     * 特色模式要隱藏的按鈕
+     * @param ok 
+     */
+    setBtnsInFeatures(ok: boolean) {
+        Game.uiCtrl.setBetBtnInteractable(ok);         
+        this.FeaturesHideGroup.forEach(node => {
+            let name = node.name;
+            if (name == 'WinMore' || name == 'DailyMission') {
+                node.active = ok;
+            } else {
+                node.getComponent(UIOpacity).opacity = ok? 255 : 0;
+                let btn = node.getComponent(Button);
+                if (btn) { btn.interactable = ok; }
+            }
+        })
+        this.nextBtn.node.active = ok;
+
+        let turret = Game.main.getTurret();
+        if (turret) {
+            if (ok) {
+                if (Game.shootMgr.isTorpedo) {
+                    Game.uiCtrl.setTorpedoCoin(turret.getBet() * Game.shootMgr.torpedoHitCount);
+                }
+            } else {
+                Game.uiCtrl.setTorpedoCoin(0);
+            }
+        }
+
+        // this.autoBtn.enableAutoGrayEffect = true;
+        // this.autoBtn.interactable = ok;
+        this.setAutoBtnInteractable(ok);
+        this.playerCoinNode.active = ok;
+        this.featuresNode.active = !ok;
+        this.setFeaturesBtn(ok)
+    }
+
+    setFeaturesBtn(ok: boolean){
+        if(appManager.isTaDaVersion){
+            this.featuresBtnNode.forEach(node => node.active = false);
+        }
+        else{
+            this.featuresBtnNode.forEach(node => node.active = ok);
+        }
+    }
+
+    setPiggyBtn(ok: boolean) {
+        if (ok) {
+            let gameid = appManager.gameID;
+            let s1 = sys.localStorage.getItem(`Piggy_${gameid}`);
+            if (s1 && s1 === '1') {
+                this.piggyNode.active = false;
+                this.piggyNode.parent.active = false;
+            } else {
+                this.piggyNode.active = true;
+                this.piggyNode.parent.active = true;
+            }
+        } else {
+            this.piggyNode.active = ok;
+            this.piggyNode.parent.active = ok;
+        }
+    }
+
+    playFeatureGame(value: number) {
+        switch (value) {
+            case 1: {
+                this.features2();
+                break;
+            }
+            case 2: {
+                this.features1();
+                break;
+            }
+        }
+
+        Comm.node.buttonLayer.active = false;
+    }
+
+    features1(isAutoPlay: boolean = true) {
+        Game.main.stopShooting(true);
+        Game.fishMgr.makeFakeDragon();
+        Game.fishMgr.checkBossComingBeforeUpdateSeat();
+
+        if (isAutoPlay) {
+            let list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17];
+            Game.shootMgr.setAutoFishIDList(list);
+        }
+
+        Game.uiCtrl.setPiggyBtn(false);
+        Game.uiCtrl.setOddsBoardActive(false);
+        Game.uiCtrl.setBtnsInFeatures(false);
+        let turret = Game.main.getTurret();
+        if (turret) {
+            turret.fakeShowBet(1);
+        }
+    }
+
+    features2(isAutoPlay: boolean = true) {
+        Game.main.stopShooting(true);
+        let plate: prot.protocol.Fish[] = [];
+        for (let i = 0; i <= 6; ++i) {
+            let fish = Game.fishMgr.getFishTower(i);
+            if (fish) {
+                let f = new prot.protocol.Fish();
+                f.index = fish.getFishId();
+                f.no = fish.getFishNo();
+                plate.push(f);
+            }
+        }
+
+        // Game.bgMgr.showKey();
+        Game.fishMgr.setBreakLevel(-1);
+        // 讓出空間
+        for (let i = 0; i <= 6; ++i) {
+            let fish = Game.fishMgr.getFishTower(i);
+            if (fish && fish.isUsed()) {
+                Game.fishMgr.setBreakLevel(fish.getFishId(), fish.getBreakLv());
+                switch (i) {
+                    case 0:
+                    case 1:
+                    case 2:
+                    case 5: {
+                        tween(fish.node)
+                        .by(0.5, { position: v3(-100, 0, 0) })
+                        .call(() => {
+                            Game.fishMgr.delFish(fish, false, true);
+                        })
+                        .start()
+                        break;
+                    }
+                    case 3:
+                    case 4:
+                    case 6: {
+                        tween(fish.node)
+                        .by(0.5, { position: v3(100, 0, 0) })
+                        .call(() => {
+                            Game.fishMgr.delFish(fish, false, true);
+                        })
+                        .start()
+                        break;
+                    }
+                }
+            }
+        }
+
+        if (isAutoPlay) {
+            let list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17];
+            Game.shootMgr.setAutoFishIDList(list);
+        }
+
+        Game.uiCtrl.setBetList();
+        Game.uiCtrl.setTorpedoBtnInteractable(false);
+        Game.uiCtrl.setOddsBoardActive(false);
+        Game.uiCtrl.setBtnsInFeatures(false);
+        Game.uiCtrl.setBetBtnInteractable(false);
+        Game.bgMgr.addDoorOpenEfk();
+        Game.piggyBank.hideBankUI(true);
+        Game.cam3D.getComponent(ChangeSceneByRunCamera).chanegeScene3();
+
+        // 表演開地下室
+        Game.bgMgr.openTheDoor(() => {
+            // 位置更新
+            Game.fishMgr.enterTreasure();
+            Game.bgMgr.switchSceneEvent(SceneEvent.Treasure, true);
+            delay(this.node, 2, () => {
+                Game.fishMgr.clearFishList();
+                Game.treasureMgr.setData(200 * walletManager.ratio, 1 * walletManager.ratio, plate, true);
+                // 標題打開才解鎖
+                Game.fishMgr.readyToUpdateSeat(() => {});
+            });
+
+            // 換砲台
+            let turret = Game.main.getTurret();
+            if (turret) {
+                turret.switchAvatar();
+                turret.fakeShowBet(1 * walletManager.ratio);
+            }
+
+            Game.uiCtrl.setBtnsInTreasure(false);
+        })
+    }
+
+    /**
+     * 判斷是否可使用道具
+     * @returns 
+     */
+    checkUseItem() {
+        let turret = Game.main.getTurret();
+        if (!turret) return false;
+
+        let tower = Game.fishMgr.getFishTower(0);
+        let isOK = (
+            tower &&
+            !turret.isLocked() &&
+            !Game.shootMgr.isAutoMatic &&
+            !Game.bgMgr.isEventOfScene(SceneEvent.Treasure) &&
+            !Game.bgMgr.isEventOfScene(SceneEvent.PigCoin)
+        );
+
+        // console.log('判斷是否可使用道具: ' + ok)
+        // console.log('冰龍: ' + !Game.bgMgr.isEventOfScene(SceneEvent.Frost))
+        // console.log('藏寶庫: ' + !Game.bgMgr.isEventOfScene(SceneEvent.Treasure))
+        // console.log('金豬: ' + !Game.bgMgr.isEventOfScene(SceneEvent.PigCoin))
+        // console.log('第一座塔: ' + tower)
+        // console.log('鎖定: ' + !turret.isLocked())
+        // console.log('智能捕魚: ' + !Game.shootMgr.isAutoMatic)
+
+        // 公版要 false 才表示可用
+        return !isOK
+    }
+
+    itemUsed(data: any) {
+        backpackManager.showUsingItem(this.bonusCardSpr.node, 0.8, () => {})
+
+        Game.main.stopShooting(true, 999);
+        let ack = prot.protocol.ItemUseAck.decode(data);
+
+        let bet = cleanNum(ack.coin / ack.odds);
+
+        walletManager.setServerRemains(walletManager.myUserID, ack.remain);
+        walletManager.buffering(bufferType.Reward, walletManager.myUserID, ack.coin);
+        Game.main.updateTurretCoin();
+
+        let plate: prot.protocol.Fish[] = [];
+        for (let i = 0; i <= 6; ++i) {
+            let fish = Game.fishMgr.getFishTower(i);
+            if (fish) {
+                let f = new prot.protocol.Fish();
+                f.index = fish.getFishId();
+                f.no = fish.getFishNo();
+                plate.push(f);
+            }
+        }
+
+        Game.fishMgr.setBreakLevel(-1);
+        // 讓出空間
+        for (let i = 0; i <= 6; ++i) {
+            let fish = Game.fishMgr.getFishTower(i);
+            if (fish && fish.isUsed()) {
+                Game.fishMgr.setBreakLevel(fish.getFishId(), fish.getBreakLv());
+                switch (i) {
+                    case 0:
+                    case 1:
+                    case 2:
+                    case 5: {
+                        tween(fish.node)
+                        .by(0.5, { position: v3(-300, 0, 0) })
+                        .call(() => {
+                            Game.fishMgr.delFish(fish, false, true);
+                        })
+                        .start()
+                        break;
+                    }
+                    case 3:
+                    case 4:
+                    case 6: {
+                        tween(fish.node)
+                        .by(0.5, { position: v3(300, 0, 0) })
+                        .call(() => {
+                            Game.fishMgr.delFish(fish, false, true);
+                        })
+                        .start()
+                        break;
+                    }
+                }
+            }
+        }
+
+        let list: number[] = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17];
+        Game.shootMgr.setAutoFishIDList(list);
+
+        Game.uiCtrl.setBetList();
+        Game.uiCtrl.setTorpedoBtnInteractable(false);
+        Game.uiCtrl.setOddsBoardActive(false);
+        Game.uiCtrl.setAutoBtnInteractable(false);
+        Game.uiCtrl.setBetBtnInteractable(false);
+        Game.bgMgr.addDoorOpenEfk();
+        Game.piggyBank.hideBankUI(true);
+        Game.cam3D.getComponent(ChangeSceneByRunCamera).chanegeScene3(1);
+
+        // 表演開地下室
+        Game.bgMgr.openTheDoor(() => {
+
+            // 位置更新
+            Game.fishMgr.enterTreasure();
+            Game.bgMgr.switchSceneEvent(SceneEvent.Treasure, true);
+            delay(this.node, 2, () => {
+                Game.fishMgr.clearFishList();
+                Game.treasureMgr.setData(ack.coin, bet, plate, true);
+                // 標題打開才解鎖
+                Game.fishMgr.readyToUpdateSeat(() => {});
+            });
+
+            // 換砲台
+            let turret = Game.main.getTurret();
+            if (turret) {
+                turret.switchAvatar();
+                turret.fakeShowBet(bet);
+            }
+
+            Game.uiCtrl.setBtnsInTreasure(false);
+        })
+    }
+
+    /**
+     * 切換多幣別顯示
+     */
+    setCoinSprite() {
+        this.coinSprite.forEach(s => {
+            s.show();
+        })
+    }
+
+    iframeStopAutoPlay = () => {
+        if (Game.shootMgr.isAutoMatic) {
+            this.toolEvent(null, 'AutoMatic');
+        }
+    }
+}

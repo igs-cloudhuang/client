@@ -1,0 +1,109 @@
+[
+  {
+    "__type__": "cc.Prefab",
+    "_name": "Tower_Shattered_Golden",
+    "_objFlags": 0,
+    "_native": "",
+    "data": {
+      "__id__": 1
+    },
+    "optimizationPolicy": 0,
+    "persistent": false,
+    "asyncLoadAssets": false
+  },
+  {
+    "__type__": "cc.Node",
+    "_name": "Tower_Shattered_Golden",
+    "_objFlags": 0,
+    "__editorExtras__": {},
+    "_parent": null,
+    "_children": [],
+    "_active": true,
+    "_components": [
+      {
+        "__id__": 2
+      }
+    ],
+    "_prefab": {
+      "__id__": 4
+    },
+    "_lpos": {
+      "__type__": "cc.Vec3",
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "_lrot": {
+      "__type__": "cc.Quat",
+      "x": 0,
+      "y": 0,
+      "z": 0,
+      "w": 1
+    },
+    "_lscale": {
+      "__type__": "cc.Vec3",
+      "x": 100,
+      "y": 100,
+      "z": 100
+    },
+    "_layer": 8388608,
+    "_euler": {
+      "__type__": "cc.Vec3",
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "_id": ""
+  },
+  {
+    "__type__": "1d189MYptBN74HAnWl02Xv/",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 1
+    },
+    "_enabled": true,
+    "__prefab": {
+      "__id__": 3
+    },
+    "_materials": [],
+    "_visFlags": 0,
+    "_efk": {
+      "__uuid__": "497e3062-2ce8-47f6-8b7d-4660535ca510",
+      "__expectedType__": "cc.Asset"
+    },
+    "efkModels": [],
+    "efkTextures": [
+      {
+        "__uuid__": "37648df9-96a7-43fd-8311-8818af025193@6c48a",
+        "__expectedType__": "cc.Texture2D"
+      },
+      {
+        "__uuid__": "26995c3d-16ff-4984-8770-0657e225f1f8@6c48a",
+        "__expectedType__": "cc.Texture2D"
+      }
+    ],
+    "efkMats": [],
+    "efkConfig": {
+      "__uuid__": "6b7033b8-a9a2-4026-9cef-cace182c35fb",
+      "__expectedType__": "cc.Prefab"
+    },
+    "autoDestroy": false,
+    "_repeat": false,
+    "_id": ""
+  },
+  {
+    "__type__": "cc.CompPrefabInfo",
+    "fileId": "6a6KJAWAJDeLdoU1eNfNuc"
+  },
+  {
+    "__type__": "cc.PrefabInfo",
+    "root": {
+      "__id__": 1
+    },
+    "asset": {
+      "__id__": 0
+    },
+    "fileId": "c720t4UCJGlZmPbvCs0zOW"
+  }
+]

@@ -1,0 +1,28 @@
+{
+  "20": {
+    "odds": 20,
+    "fishNo1": 125,
+    "fishNo2": 126,
+    "fishNo3": 127,
+    "fishNo4": 128,
+    "fishNo5": 129,
+    "fishNo6": 130,
+    "fishNo7": 131,
+    "fishNo8": 132,
+    "fishNo9": 133,
+    "fishNo10": 134
+  },
+  "25": {
+    "odds": 25,
+    "fishNo1": 158,
+    "fishNo2": 159,
+    "fishNo3": 160,
+    "fishNo4": 161,
+    "fishNo5": 162,
+    "fishNo6": 163,
+    "fishNo7": 164,
+    "fishNo8": 165,
+    "fishNo9": 166,
+    "fishNo10": 167
+  }
+}

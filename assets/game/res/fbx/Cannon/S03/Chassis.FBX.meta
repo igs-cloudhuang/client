@@ -1,0 +1,174 @@
+{
+  "ver": "2.3.1",
+  "importer": "fbx",
+  "imported": true,
+  "uuid": "8e41c332-9d43-4e40-abae-cc1e18b0b6aa",
+  "files": [],
+  "subMetas": {
+    "3a375": {
+      "importer": "gltf-mesh",
+      "uuid": "8e41c332-9d43-4e40-abae-cc1e18b0b6aa@3a375",
+      "displayName": "",
+      "id": "3a375",
+      "name": "Chassis.mesh",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.1.0",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "f41be": {
+      "importer": "gltf-embeded-image",
+      "uuid": "8e41c332-9d43-4e40-abae-cc1e18b0b6aa@f41be",
+      "displayName": "",
+      "id": "f41be",
+      "name": "Map #12.image",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.3",
+      "imported": true,
+      "files": [
+        ".jpg",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "0c64b": {
+      "importer": "texture",
+      "uuid": "8e41c332-9d43-4e40-abae-cc1e18b0b6aa@0c64b",
+      "displayName": "",
+      "id": "0c64b",
+      "name": "Map #12.texture",
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "anisotropy": 0,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "8e41c332-9d43-4e40-abae-cc1e18b0b6aa@f41be"
+      },
+      "ver": "1.0.22",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "5de44": {
+      "importer": "gltf-material",
+      "uuid": "8e41c332-9d43-4e40-abae-cc1e18b0b6aa@5de44",
+      "displayName": "",
+      "id": "5de44",
+      "name": "05 - Default.material",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "b2ae6": {
+      "importer": "gltf-scene",
+      "uuid": "8e41c332-9d43-4e40-abae-cc1e18b0b6aa@b2ae6",
+      "displayName": "",
+      "id": "b2ae6",
+      "name": "Chassis.prefab",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.12",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "imageMetas": [
+      {
+        "name": "Map #12",
+        "uri": "8e41c332-9d43-4e40-abae-cc1e18b0b6aa@f41be"
+      }
+    ],
+    "fbx": {
+      "smartMaterialEnabled": true
+    },
+    "redirect": "8e41c332-9d43-4e40-abae-cc1e18b0b6aa@b2ae6",
+    "assetFinder": {
+      "meshes": [
+        "8e41c332-9d43-4e40-abae-cc1e18b0b6aa@3a375"
+      ],
+      "skeletons": [],
+      "textures": [
+        "8e41c332-9d43-4e40-abae-cc1e18b0b6aa@0c64b"
+      ],
+      "materials": [
+        "8e41c332-9d43-4e40-abae-cc1e18b0b6aa@5de44"
+      ],
+      "scenes": [
+        "8e41c332-9d43-4e40-abae-cc1e18b0b6aa@b2ae6"
+      ]
+    },
+    "materials": {
+      "8e41c332-9d43-4e40-abae-cc1e18b0b6aa@5de44": {
+        "__type__": "cc.Material",
+        "_name": "",
+        "_objFlags": 0,
+        "_native": "",
+        "_effectAsset": {
+          "__uuid__": "68c178aa-46c0-4608-b4d9-45b4e6c7b58d",
+          "__expectedType__": "cc.EffectAsset"
+        },
+        "_techIdx": 0,
+        "_defines": [
+          {
+            "USE_TEXTURE": true
+          },
+          {}
+        ],
+        "_states": [
+          {
+            "rasterizerState": {},
+            "depthStencilState": {},
+            "blendState": {
+              "targets": [
+                {}
+              ]
+            }
+          },
+          {
+            "rasterizerState": {},
+            "depthStencilState": {},
+            "blendState": {
+              "targets": [
+                {}
+              ]
+            }
+          }
+        ],
+        "_props": [
+          {
+            "mainTexture": {
+              "__uuid__": "064a3bf6-e49f-4b57-a097-8fd7b73aed72@6c48a",
+              "__expectedType__": "cc.Texture2D"
+            }
+          },
+          {}
+        ]
+      }
+    },
+    "tangents": 0
+  }
+}

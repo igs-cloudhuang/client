@@ -1,0 +1,46 @@
+{
+  "ver": "1.0.25",
+  "importer": "image",
+  "imported": true,
+  "uuid": "8da588be-da2c-4692-8fc2-c221d435dd52",
+  "files": [
+    ".json",
+    ".png"
+  ],
+  "subMetas": {
+    "6c48a": {
+      "importer": "texture",
+      "uuid": "8da588be-da2c-4692-8fc2-c221d435dd52@6c48a",
+      "displayName": "prize_wheel_light",
+      "id": "6c48a",
+      "name": "texture",
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "anisotropy": 0,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "8da588be-da2c-4692-8fc2-c221d435dd52",
+        "visible": true
+      },
+      "ver": "1.0.22",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "type": "texture",
+    "fixAlphaTransparencyArtifacts": true,
+    "hasAlpha": true,
+    "redirect": "8da588be-da2c-4692-8fc2-c221d435dd52@6c48a",
+    "compressSettings": {
+      "useCompressTexture": true,
+      "presetId": "89f61fPH5EkLRujwAYP2Dt"
+    }
+  }
+}

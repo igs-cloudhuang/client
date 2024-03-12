@@ -1,0 +1,322 @@
+{
+  "textureCompressConfig": {
+    "userPreset": {
+      "4dziYKxcVKiZMrHcxeQQV7": {
+        "name": "png-webp",
+        "options": {
+          "web": {
+            "png": {
+              "quality": 100
+            },
+            "webp": {
+              "quality": 80
+            },
+            "astc_4x4": {
+              "quality": "medium"
+            }
+          },
+          "ios": {
+            "png": {
+              "quality": 100
+            },
+            "webp": {
+              "quality": 80
+            },
+            "astc_4x4": {
+              "quality": "medium"
+            }
+          },
+          "android": {
+            "png": {
+              "quality": 100
+            },
+            "webp": {
+              "quality": 80
+            },
+            "astc_4x4": {
+              "quality": "medium"
+            }
+          }
+        }
+      },
+      "3bBkNvvTtOT7cEIl90nJdx": {
+        "name": "jpg-webp",
+        "options": {
+          "web": {
+            "jpg": {
+              "quality": 100
+            },
+            "webp": {
+              "quality": 80
+            },
+            "astc_4x4": {
+              "quality": "medium"
+            }
+          },
+          "ios": {
+            "jpg": {
+              "quality": 100
+            },
+            "webp": {
+              "quality": 80
+            },
+            "astc_4x4": {
+              "quality": "medium"
+            }
+          },
+          "android": {
+            "jpg": {
+              "quality": 100
+            },
+            "webp": {
+              "quality": 80
+            },
+            "astc_4x4": {
+              "quality": "medium"
+            }
+          }
+        }
+      },
+      "89f61fPH5EkLRujwAYP2Dt": {
+        "name": "png-webp-low",
+        "options": {
+          "web": {
+            "png": {
+              "quality": 80
+            },
+            "webp": {
+              "quality": 60
+            },
+            "astc_6x6": {
+              "quality": "medium"
+            }
+          },
+          "ios": {
+            "png": {
+              "quality": 80
+            },
+            "webp": {
+              "quality": 60
+            },
+            "astc_6x6": {
+              "quality": "medium"
+            }
+          },
+          "android": {
+            "png": {
+              "quality": 80
+            },
+            "webp": {
+              "quality": 60
+            },
+            "astc_6x6": {
+              "quality": "medium"
+            }
+          }
+        }
+      },
+      "e04aET5yxK4Ls4pvyD9TSS": {
+        "name": "jpg-webp-low",
+        "options": {
+          "web": {
+            "jpg": {
+              "quality": 80
+            },
+            "webp": {
+              "quality": 60
+            },
+            "astc_6x6": {
+              "quality": "medium"
+            }
+          },
+          "ios": {
+            "jpg": {
+              "quality": 80
+            },
+            "webp": {
+              "quality": 60
+            },
+            "astc_6x6": {
+              "quality": "medium"
+            }
+          },
+          "android": {
+            "jpg": {
+              "quality": 80
+            },
+            "webp": {
+              "quality": 60
+            },
+            "astc_6x6": {
+              "quality": "medium"
+            }
+          }
+        }
+      },
+      "09YSJxlupJAZBopulcqTwO": {
+        "name": "png-webp-bad",
+        "options": {
+          "web": {
+            "png": {
+              "quality": 60
+            },
+            "webp": {
+              "quality": 40
+            },
+            "astc_6x6": {
+              "quality": "medium"
+            }
+          },
+          "ios": {
+            "png": {
+              "quality": 60
+            },
+            "webp": {
+              "quality": 40
+            },
+            "astc_6x6": {
+              "quality": "medium"
+            }
+          },
+          "android": {
+            "png": {
+              "quality": 60
+            },
+            "webp": {
+              "quality": 40
+            },
+            "astc_6x6": {
+              "quality": "medium"
+            }
+          }
+        }
+      },
+      "5c2YXrUytCT7p3dsRv+6EC": {
+        "name": "jpg-webp-bad",
+        "options": {
+          "web": {
+            "jpg": {
+              "quality": 60
+            },
+            "webp": {
+              "quality": 40
+            },
+            "astc_6x6": {
+              "quality": "medium"
+            }
+          },
+          "ios": {
+            "jpg": {
+              "quality": 60
+            },
+            "webp": {
+              "quality": 40
+            },
+            "astc_6x6": {
+              "quality": "medium"
+            }
+          },
+          "android": {
+            "jpg": {
+              "quality": 60
+            },
+            "webp": {
+              "quality": 40
+            },
+            "astc_6x6": {
+              "quality": "medium"
+            }
+          }
+        }
+      },
+      "dcWrByQGJOsIe5wStuV/vo": {
+        "name": "png-webp-very-bad",
+        "options": {
+          "web": {
+            "png": {
+              "quality": 50
+            },
+            "webp": {
+              "quality": 20
+            },
+            "astc_8x8": {
+              "quality": "medium"
+            }
+          },
+          "ios": {
+            "png": {
+              "quality": 50
+            },
+            "webp": {
+              "quality": 20
+            },
+            "astc_8x8": {
+              "quality": "medium"
+            }
+          },
+          "android": {
+            "png": {
+              "quality": 50
+            },
+            "webp": {
+              "quality": 20
+            },
+            "astc_8x8": {
+              "quality": "medium"
+            }
+          }
+        }
+      },
+      "31X3cJp5lIJ6+y0XZMwpb9": {
+        "name": "jpg-webp-very-bad",
+        "options": {
+          "web": {
+            "jpg": {
+              "quality": 50
+            },
+            "webp": {
+              "quality": 20
+            },
+            "astc_8x8": {
+              "quality": "medium"
+            }
+          },
+          "ios": {
+            "jpg": {
+              "quality": 50
+            },
+            "webp": {
+              "quality": 20
+            },
+            "astc_8x8": {
+              "quality": "medium"
+            }
+          },
+          "android": {
+            "jpg": {
+              "quality": 50
+            },
+            "webp": {
+              "quality": 20
+            },
+            "astc_8x8": {
+              "quality": "medium"
+            }
+          }
+        }
+      }
+    }
+  },
+  "splash-setting": {
+    "clearColor": {
+      "x": 0,
+      "y": 0,
+      "z": 0,
+      "w": 0
+    },
+    "url": "",
+    "displayWatermark": false,
+    "displayRatio": 0.1,
+    "totalTime": 1000
+  }
+}

@@ -1,0 +1,71 @@
+
+struct VS_Input
+{
+    vec3 Pos;
+    vec3 Normal;
+    vec3 Binormal;
+    vec3 Tangent;
+    vec2 UV;
+    vec4 Color;
+};
+
+struct VS_Output
+{
+    vec4 PosVS;
+    vec4 Color;
+    vec2 UV;
+    vec4 PosP;
+};
+
+uniform VS_ConstantBuffer
+{
+    mat4 mCameraProj;
+    mat4 mModel;
+    vec4 fUV;
+    vec4 fModelColor;
+    vec4 mUVInversed;
+};
+
+in vec3 Input_Pos;
+in vec3 Input_Normal;
+in vec3 Input_Binormal;
+in vec3 Input_Tangent;
+in vec2 Input_UV;
+in vec4 Input_Color;
+out vec4 _VSPS_Color;
+out vec2 _VSPS_UV;
+out vec4 _VSPS_PosP;
+
+VS_Output _main(VS_Input Input)
+{
+    vec4 uv = fUV;
+    vec4 modelColor = fModelColor * Input_Color;
+    VS_Output Output = VS_Output(vec4(0.0), vec4(0.0), vec2(0.0), vec4(0.0));
+    vec4 localPos = vec4(Input.Pos.x, Input.Pos.y, Input.Pos.z, 1.0);
+    vec4 worldPos = mModel * localPos;
+    Output.PosVS = mCameraProj * worldPos;
+    Output.Color = modelColor;
+    vec2 outputUV = Input.UV;
+    outputUV.x = (outputUV.x * uv.z) + uv.x;
+    outputUV.y = (outputUV.y * uv.w) + uv.y;
+    outputUV.y = mUVInversed.x + (mUVInversed.y * outputUV.y);
+    Output.UV = outputUV;
+    Output.PosP = Output.PosVS;
+    return Output;
+}
+
+vec4 vert()
+{
+    VS_Input Input;
+    Input.Pos = Input_Pos;
+    Input.Normal = Input_Normal;
+    Input.Binormal = Input_Binormal;
+    Input.Tangent = Input_Tangent;
+    Input.UV = Input_UV;
+    Input.Color = Input_Color;
+    VS_Output flattenTemp = _main(Input);
+    _VSPS_Color = flattenTemp.Color;
+    _VSPS_UV = flattenTemp.UV;
+    _VSPS_PosP = flattenTemp.PosP;
+    return flattenTemp.PosVS;
+}

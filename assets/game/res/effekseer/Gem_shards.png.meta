@@ -1,0 +1,46 @@
+{
+  "ver": "1.0.25",
+  "importer": "image",
+  "imported": true,
+  "uuid": "af9e6117-1832-4b9b-ae59-7b9f3a1279bc",
+  "files": [
+    ".json",
+    ".png"
+  ],
+  "subMetas": {
+    "6c48a": {
+      "importer": "texture",
+      "uuid": "af9e6117-1832-4b9b-ae59-7b9f3a1279bc@6c48a",
+      "displayName": "Gem_shards",
+      "id": "6c48a",
+      "name": "texture",
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "anisotropy": 0,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "af9e6117-1832-4b9b-ae59-7b9f3a1279bc",
+        "visible": true
+      },
+      "ver": "1.0.22",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "type": "texture",
+    "fixAlphaTransparencyArtifacts": false,
+    "hasAlpha": true,
+    "redirect": "af9e6117-1832-4b9b-ae59-7b9f3a1279bc@6c48a",
+    "compressSettings": {
+      "useCompressTexture": true,
+      "presetId": "89f61fPH5EkLRujwAYP2Dt"
+    }
+  }
+}

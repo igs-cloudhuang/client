@@ -1,0 +1,22 @@
+info face="Arial" size=32 bold=0 italic=0 charset="" unicode=1 stretchH=100 smooth=1 aa=1 padding=0,0,0,0 spacing=1,1 outline=0
+common lineHeight=32 base=26 scaleW=640 scaleH=640 pages=1 packed=0 alphaChnl=1 redChnl=0 greenChnl=0 blueChnl=0
+page id=0 file="RateFont.png"
+chars count=18
+char id=43   x=0     y=0     width=100   height=168   xoffset=0     yoffset=0     xadvance=100   page=0  chnl=15
+char id=44   x=404   y=338   width=39    height=168   xoffset=0     yoffset=0     xadvance=39    page=0  chnl=15
+char id=45   x=101   y=0     width=100   height=168   xoffset=0     yoffset=0     xadvance=100   page=0  chnl=15
+char id=46   x=444   y=338   width=39    height=168   xoffset=0     yoffset=0     xadvance=39    page=0  chnl=15
+char id=47   x=202   y=0     width=100   height=168   xoffset=0     yoffset=0     xadvance=100   page=0  chnl=15
+char id=48   x=303   y=0     width=100   height=168   xoffset=0     yoffset=0     xadvance=100   page=0  chnl=15
+char id=49   x=404   y=0     width=100   height=168   xoffset=0     yoffset=0     xadvance=100   page=0  chnl=15
+char id=50   x=505   y=0     width=100   height=168   xoffset=0     yoffset=0     xadvance=100   page=0  chnl=15
+char id=51   x=0     y=169   width=100   height=168   xoffset=0     yoffset=0     xadvance=100   page=0  chnl=15
+char id=52   x=101   y=169   width=100   height=168   xoffset=0     yoffset=0     xadvance=100   page=0  chnl=15
+char id=53   x=202   y=169   width=100   height=168   xoffset=0     yoffset=0     xadvance=100   page=0  chnl=15
+char id=54   x=303   y=169   width=100   height=168   xoffset=0     yoffset=0     xadvance=100   page=0  chnl=15
+char id=55   x=404   y=169   width=100   height=168   xoffset=0     yoffset=0     xadvance=100   page=0  chnl=15
+char id=56   x=505   y=169   width=100   height=168   xoffset=0     yoffset=0     xadvance=100   page=0  chnl=15
+char id=57   x=0     y=338   width=100   height=168   xoffset=0     yoffset=0     xadvance=100   page=0  chnl=15
+char id=61   x=101   y=338   width=100   height=168   xoffset=0     yoffset=0     xadvance=100   page=0  chnl=15
+char id=88   x=202   y=338   width=100   height=168   xoffset=0     yoffset=0     xadvance=100   page=0  chnl=15
+char id=120  x=303   y=338   width=100   height=168   xoffset=0     yoffset=0     xadvance=100   page=0  chnl=15

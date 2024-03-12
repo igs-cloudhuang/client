@@ -1,0 +1,135 @@
+{
+  "ver": "1.0.25",
+  "importer": "image",
+  "imported": true,
+  "uuid": "3aa1f875-0afc-4b25-9da0-2fe8a28315bb",
+  "files": [
+    ".json",
+    ".png"
+  ],
+  "subMetas": {
+    "6c48a": {
+      "importer": "texture",
+      "uuid": "3aa1f875-0afc-4b25-9da0-2fe8a28315bb@6c48a",
+      "displayName": "TreasureMoney",
+      "id": "6c48a",
+      "name": "texture",
+      "userData": {
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "wrapModeT": "clamp-to-edge",
+        "wrapModeS": "clamp-to-edge",
+        "mipfilter": "none",
+        "imageUuidOrDatabaseUri": "3aa1f875-0afc-4b25-9da0-2fe8a28315bb",
+        "isUuid": true,
+        "visible": false,
+        "anisotropy": 0
+      },
+      "ver": "1.0.22",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "f9941": {
+      "importer": "sprite-frame",
+      "uuid": "3aa1f875-0afc-4b25-9da0-2fe8a28315bb@f9941",
+      "displayName": "TreasureMoney",
+      "id": "f9941",
+      "name": "spriteFrame",
+      "userData": {
+        "importer": "sprite-frame",
+        "trimType": "auto",
+        "trimThreshold": 1,
+        "rotated": false,
+        "offsetX": 0,
+        "offsetY": 0.5,
+        "trimX": 2,
+        "trimY": 3,
+        "width": 117,
+        "height": 114,
+        "rawWidth": 121,
+        "rawHeight": 121,
+        "borderTop": 42,
+        "borderBottom": 26,
+        "borderLeft": 29,
+        "borderRight": 18,
+        "imageUuidOrDatabaseUri": "3aa1f875-0afc-4b25-9da0-2fe8a28315bb@6c48a",
+        "packable": true,
+        "pixelsToUnit": 100,
+        "pivotX": 0.5,
+        "pivotY": 0.5,
+        "meshType": 0,
+        "vertices": {
+          "rawPosition": [
+            -58.5,
+            -57,
+            0,
+            58.5,
+            -57,
+            0,
+            -58.5,
+            57,
+            0,
+            58.5,
+            57,
+            0
+          ],
+          "indexes": [
+            0,
+            1,
+            2,
+            2,
+            1,
+            3
+          ],
+          "uv": [
+            2,
+            118,
+            119,
+            118,
+            2,
+            4,
+            119,
+            4
+          ],
+          "nuv": [
+            0.01652892561983471,
+            0.03305785123966942,
+            0.9834710743801653,
+            0.03305785123966942,
+            0.01652892561983471,
+            0.9752066115702479,
+            0.9834710743801653,
+            0.9752066115702479
+          ],
+          "minPos": [
+            -58.5,
+            -57,
+            0
+          ],
+          "maxPos": [
+            58.5,
+            57,
+            0
+          ]
+        },
+        "isUuid": true,
+        "atlasUuid": ""
+      },
+      "ver": "1.0.11",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "type": "sprite-frame",
+    "fixAlphaTransparencyArtifacts": false,
+    "hasAlpha": true,
+    "redirect": "3aa1f875-0afc-4b25-9da0-2fe8a28315bb@f9941"
+  }
+}

@@ -1,0 +1,51 @@
+import { _decorator, Component, Sprite, SpriteFrame } from 'cc';
+import { annin } from '../system';
+
+const { ccclass, property, disallowMultiple, requireComponent } = _decorator;
+
+declare const Annin: annin;
+
+@ccclass('LangIndieImg')
+@disallowMultiple
+@requireComponent(Sprite)
+export class LangIndieImg extends Component {
+
+    @property
+    spriteName: string = '';
+
+    @property({
+        tooltip: '是否使用共用字圖?',
+    })
+    useCommon: boolean = false;
+
+    onEnable() {
+        let spr = this.node.getComponent(Sprite);
+        if (spr.spriteFrame)
+            return;
+
+        let bundle = this.useCommon ? Annin.Comm.bundle.common : Annin.Comm.bundle.game;
+        let url = `${!this.useCommon ? 'res/' : ''}langIndieImg/${Annin.i18n.getLangCode()}/${this.spriteName}/spriteFrame`;
+        bundle.load<SpriteFrame>(url, (err, sprFrame) => {
+            // 下載回來有時間差, 要擋各種情況
+            if (err || !this.node || !this.node.activeInHierarchy || !spr) {
+                sprFrame?.decRef();
+                return;
+            }
+            if (spr.spriteFrame)
+                return;
+
+            sprFrame.packable = false;
+            spr.spriteFrame = sprFrame;
+            sprFrame.addRef();
+        });
+    }
+
+    onDisable() {
+        let spr = this.node.getComponent(Sprite);
+        if (spr.spriteFrame) {
+            spr.spriteFrame.decRef();
+            spr.spriteFrame = null;
+        }
+    }
+
+}

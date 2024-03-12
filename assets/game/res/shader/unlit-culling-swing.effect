@@ -1,0 +1,115 @@
+CCEffect %{
+  techniques:
+  - name: opaque
+    passes:
+    - vert: unlit-vs:vert
+      frag: unlit-fs:frag
+      depthStencilState:
+        depthTest: true
+        depthWrite: true
+      blendState:
+        targets:
+        - blend: false
+          blendSrc: src_alpha
+          blendDst: one_minus_src_alpha
+          blendDstAlpha: one_minus_src_alpha
+      properties: &props
+        mainTiling: { value: [1, 1] }
+        mainOffset: { value: [0, 0] }
+        mainTexture: { value: white }
+        diffuseColor: { value: [1, 1, 1, 1], inspector: { type: color } }        
+        alphaThreshold: { value: 0.5 }
+        freq: { value: 1.3 }
+        force: { value: 0.04 }
+        time: { value: 0.0 }
+  - name: transparent
+    passes:
+    - vert: unlit-vs:vert
+      frag: unlit-fs:frag
+      depthStencilState:
+        depthTest: true
+        depthWrite: false
+      blendState:
+        targets:
+        - blend: true
+          blendSrc: src_alpha
+          blendDst: one_minus_src_alpha
+          blendDstAlpha: one_minus_src_alpha
+      properties: &props
+        mainTiling: { value: [1, 1] }
+        mainOffset: { value: [0, 0] }
+        mainTexture: { value: white }
+        diffuseColor: { value: [1, 1, 1, 1], inspector: { type: color } }        
+        alphaThreshold: { value: 0.5 }
+        freq: { value: 1.3 }
+        force: { value: 0.04 }
+        time: { value: 0.0 }
+}%
+
+CCProgram unlit-vs %{
+  precision highp float;
+  #include <builtin/uniforms/cc-global>
+  #include <legacy/decode-base>
+  #include <legacy/local-batch>
+  #include <legacy/input-standard>
+
+  in vec3 v_position;
+
+  #if USE_TEXTURE
+    out vec2 v_uv;
+    uniform MAIN_TILING {
+      vec2 mainTiling;
+      vec2 mainOffset;
+    };
+  #endif
+
+  vec4 vert () {
+    StandardVertInput In;
+    CCVertInput(In);
+
+    mat4 matWorld, matWorldIT;
+    CCGetWorldMatrixFull(matWorld, matWorldIT);
+    #if USE_TEXTURE
+      v_uv = a_texCoord * mainTiling + mainOffset;
+    #endif
+ 
+    vec4 pos = In.position;
+    return cc_matProj * (cc_matView * matWorld) * pos;
+  }
+}%
+
+CCProgram unlit-fs %{
+  precision mediump float;
+  #include <legacy/output>
+  #include <alpha-test>
+
+  uniform UNLIT {
+    lowp vec4 diffuseColor;
+  };
+
+  #if USE_TEXTURE
+    in mediump vec2 v_uv;
+    uniform sampler2D mainTexture;
+  #endif
+
+  uniform VALUE {
+    float freq;
+    float force;
+    float time;
+  };
+
+  vec4 frag () {
+    vec4 color = diffuseColor;
+
+    #if USE_TEXTURE
+      vec2 uv = v_uv;
+      float height = 1. - uv.y;    // 0 ~ 1
+      uv.x += cos(freq * time) * pow(height, 1.5) * force;
+      color *= texture(mainTexture, uv);
+    #endif
+
+    ALPHA_TEST(color);
+
+    return CCFragOutput( color );
+  }
+}%

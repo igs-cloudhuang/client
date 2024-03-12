@@ -1,0 +1,269 @@
+{
+  "ver": "2.3.1",
+  "importer": "fbx",
+  "imported": true,
+  "uuid": "04710ec1-fc80-4be1-bc51-41959ee67dc2",
+  "files": [],
+  "subMetas": {
+    "fc1fc": {
+      "importer": "gltf-mesh",
+      "uuid": "04710ec1-fc80-4be1-bc51-41959ee67dc2@fc1fc",
+      "displayName": "",
+      "id": "fc1fc",
+      "name": "floor_Material0.mesh",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.1.0",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "ab932": {
+      "importer": "texture",
+      "uuid": "04710ec1-fc80-4be1-bc51-41959ee67dc2@ab932",
+      "displayName": "",
+      "id": "ab932",
+      "name": "Map #0.texture",
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "anisotropy": 0,
+        "isUuid": false,
+        "imageUuidOrDatabaseUri": "db://assets/game/res/fbx/floor_combination/floor.png"
+      },
+      "ver": "1.0.22",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "81e17": {
+      "importer": "texture",
+      "uuid": "04710ec1-fc80-4be1-bc51-41959ee67dc2@81e17",
+      "displayName": "",
+      "id": "81e17",
+      "name": "Map #22.texture",
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "anisotropy": 0,
+        "isUuid": false,
+        "imageUuidOrDatabaseUri": "db://assets/game/res/fbx/floor_combination/Bottom_plate.png"
+      },
+      "ver": "1.0.22",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "ba6c0": {
+      "importer": "gltf-material",
+      "uuid": "04710ec1-fc80-4be1-bc51-41959ee67dc2@ba6c0",
+      "displayName": "",
+      "id": "ba6c0",
+      "name": "floor.material",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "cfc1f": {
+      "importer": "gltf-material",
+      "uuid": "04710ec1-fc80-4be1-bc51-41959ee67dc2@cfc1f",
+      "displayName": "",
+      "id": "cfc1f",
+      "name": "Bottom_plate.material",
+      "userData": {
+        "gltfIndex": 1
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "9f8d7": {
+      "importer": "gltf-scene",
+      "uuid": "04710ec1-fc80-4be1-bc51-41959ee67dc2@9f8d7",
+      "displayName": "",
+      "id": "9f8d7",
+      "name": "floor.prefab",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.12",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "imageMetas": [
+      {
+        "name": "Map #0",
+        "uri": "db://assets/game/res/fbx/floor_combination/floor.png"
+      },
+      {
+        "name": "Map #22",
+        "uri": "db://assets/game/res/fbx/floor_combination/Bottom_plate.png"
+      }
+    ],
+    "fbx": {
+      "smartMaterialEnabled": true
+    },
+    "redirect": "04710ec1-fc80-4be1-bc51-41959ee67dc2@9f8d7",
+    "assetFinder": {
+      "meshes": [
+        "04710ec1-fc80-4be1-bc51-41959ee67dc2@fc1fc"
+      ],
+      "skeletons": [],
+      "textures": [
+        "04710ec1-fc80-4be1-bc51-41959ee67dc2@ab932",
+        "04710ec1-fc80-4be1-bc51-41959ee67dc2@81e17"
+      ],
+      "materials": [
+        "04710ec1-fc80-4be1-bc51-41959ee67dc2@ba6c0",
+        "04710ec1-fc80-4be1-bc51-41959ee67dc2@cfc1f"
+      ],
+      "scenes": [
+        "04710ec1-fc80-4be1-bc51-41959ee67dc2@9f8d7"
+      ]
+    },
+    "materials": {
+      "04710ec1-fc80-4be1-bc51-41959ee67dc2@ba6c0": {
+        "__type__": "cc.Material",
+        "_name": "",
+        "_objFlags": 0,
+        "_native": "",
+        "_effectAsset": {
+          "__uuid__": "d7fb6575-8238-4766-883b-ca8f675e008e",
+          "__expectedType__": "cc.EffectAsset"
+        },
+        "_techIdx": 0,
+        "_defines": [
+          {
+            "USE_ALBEDO_MAP": true
+          },
+          {},
+          {}
+        ],
+        "_states": [
+          {
+            "rasterizerState": {},
+            "depthStencilState": {},
+            "blendState": {
+              "targets": [
+                {}
+              ]
+            }
+          },
+          {
+            "rasterizerState": {},
+            "depthStencilState": {},
+            "blendState": {
+              "targets": [
+                {}
+              ]
+            }
+          },
+          {
+            "rasterizerState": {},
+            "depthStencilState": {},
+            "blendState": {
+              "targets": [
+                {}
+              ]
+            }
+          }
+        ],
+        "_props": [
+          {
+            "roughness": 1,
+            "metallic": 0,
+            "specularIntensity": 0,
+            "mainTexture": {
+              "__uuid__": "4892be6c-5a35-4b65-bcec-2714e99147d7@6c48a",
+              "__expectedType__": "cc.Texture2D"
+            }
+          },
+          {},
+          {}
+        ]
+      },
+      "04710ec1-fc80-4be1-bc51-41959ee67dc2@cfc1f": {
+        "__type__": "cc.Material",
+        "_name": "",
+        "_objFlags": 0,
+        "_native": "",
+        "_effectAsset": {
+          "__uuid__": "68c178aa-46c0-4608-b4d9-45b4e6c7b58d",
+          "__expectedType__": "cc.EffectAsset"
+        },
+        "_techIdx": "0",
+        "_defines": [
+          {
+            "USE_TEXTURE": true
+          },
+          {}
+        ],
+        "_states": [
+          {
+            "rasterizerState": {},
+            "depthStencilState": {},
+            "blendState": {
+              "targets": [
+                {}
+              ]
+            }
+          },
+          {
+            "rasterizerState": {},
+            "depthStencilState": {},
+            "blendState": {
+              "targets": [
+                {}
+              ]
+            }
+          }
+        ],
+        "_props": [
+          {
+            "mainTexture": {
+              "__uuid__": "53b6ded8-d535-4a52-9fc4-a7e8e8242391@6c48a",
+              "__expectedType__": "cc.Texture2D"
+            },
+            "fogColor": {
+              "__type__": "cc.Color",
+              "r": 0,
+              "g": 0,
+              "b": 0,
+              "a": 255
+            }
+          },
+          {}
+        ]
+      }
+    },
+    "tangents": 0
+  }
+}

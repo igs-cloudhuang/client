@@ -1,0 +1,46 @@
+{
+  "ver": "1.0.25",
+  "importer": "image",
+  "imported": true,
+  "uuid": "1620fdeb-c0b3-4c5e-9088-94ccc68bdea3",
+  "files": [
+    ".jpg",
+    ".json"
+  ],
+  "subMetas": {
+    "6c48a": {
+      "importer": "texture",
+      "uuid": "1620fdeb-c0b3-4c5e-9088-94ccc68bdea3@6c48a",
+      "displayName": "Gradual",
+      "id": "6c48a",
+      "name": "texture",
+      "userData": {
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "wrapModeT": "repeat",
+        "wrapModeS": "repeat",
+        "mipfilter": "none",
+        "imageUuidOrDatabaseUri": "1620fdeb-c0b3-4c5e-9088-94ccc68bdea3",
+        "isUuid": true,
+        "visible": true,
+        "anisotropy": 0
+      },
+      "ver": "1.0.22",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "type": "texture",
+    "fixAlphaTransparencyArtifacts": false,
+    "hasAlpha": false,
+    "redirect": "1620fdeb-c0b3-4c5e-9088-94ccc68bdea3@6c48a",
+    "compressSettings": {
+      "useCompressTexture": true,
+      "presetId": "e04aET5yxK4Ls4pvyD9TSS"
+    }
+  }
+}

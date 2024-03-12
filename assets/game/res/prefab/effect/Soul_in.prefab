@@ -1,0 +1,118 @@
+[
+  {
+    "__type__": "cc.Prefab",
+    "_name": "Soul_in",
+    "_objFlags": 0,
+    "_native": "",
+    "data": {
+      "__id__": 1
+    },
+    "optimizationPolicy": 0,
+    "persistent": false,
+    "asyncLoadAssets": false
+  },
+  {
+    "__type__": "cc.Node",
+    "_name": "Soul_in",
+    "_objFlags": 0,
+    "__editorExtras__": {},
+    "_parent": null,
+    "_children": [],
+    "_active": true,
+    "_components": [
+      {
+        "__id__": 2
+      }
+    ],
+    "_prefab": {
+      "__id__": 4
+    },
+    "_lpos": {
+      "__type__": "cc.Vec3",
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "_lrot": {
+      "__type__": "cc.Quat",
+      "x": 0,
+      "y": 0,
+      "z": 0,
+      "w": 1
+    },
+    "_lscale": {
+      "__type__": "cc.Vec3",
+      "x": 50,
+      "y": 50,
+      "z": 50
+    },
+    "_layer": 8388608,
+    "_euler": {
+      "__type__": "cc.Vec3",
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "_id": ""
+  },
+  {
+    "__type__": "1d189MYptBN74HAnWl02Xv/",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 1
+    },
+    "_enabled": true,
+    "__prefab": {
+      "__id__": 3
+    },
+    "_materials": [],
+    "_visFlags": 0,
+    "_efk": {
+      "__uuid__": "4f355846-bd02-4d4f-b1c9-b76a59b969c2",
+      "__expectedType__": "cc.Asset"
+    },
+    "efkModels": [
+      {
+        "__uuid__": "9715595b-8f1d-4e3a-a548-0f041e959450",
+        "__expectedType__": "cc.Asset"
+      }
+    ],
+    "efkTextures": [
+      {
+        "__uuid__": "d4bbe168-9f28-4f8b-b728-c1318dd37a40@6c48a",
+        "__expectedType__": "cc.Texture2D"
+      },
+      {
+        "__uuid__": "e480a0b6-7cd0-4a53-b7e0-b76cefd152fb@6c48a",
+        "__expectedType__": "cc.Texture2D"
+      },
+      {
+        "__uuid__": "26995c3d-16ff-4984-8770-0657e225f1f8@6c48a",
+        "__expectedType__": "cc.Texture2D"
+      }
+    ],
+    "efkMats": [],
+    "efkConfig": {
+      "__uuid__": "6b7033b8-a9a2-4026-9cef-cace182c35fb",
+      "__expectedType__": "cc.Prefab"
+    },
+    "autoDestroy": false,
+    "_repeat": false,
+    "_id": ""
+  },
+  {
+    "__type__": "cc.CompPrefabInfo",
+    "fileId": "1erRK2LV9EaLYSepFxMF5L"
+  },
+  {
+    "__type__": "cc.PrefabInfo",
+    "root": {
+      "__id__": 1
+    },
+    "asset": {
+      "__id__": 0
+    },
+    "fileId": "f9bbYJ5S5AgKD2AGl56pue"
+  }
+]

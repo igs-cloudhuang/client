@@ -1,0 +1,286 @@
+
+GEM_Object.png
+size: 901,901
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+2
+  rotate: true
+  xy: 739, 20
+  size: 53, 79
+  orig: 54, 102
+  offset: 1, 12
+  index: -1
+3
+  rotate: false
+  xy: 823, 764
+  size: 54, 80
+  orig: 54, 102
+  offset: 0, 11
+  index: -1
+4
+  rotate: true
+  xy: 823, 846
+  size: 54, 77
+  orig: 54, 102
+  offset: 0, 13
+  index: -1
+5
+  rotate: false
+  xy: 818, 425
+  size: 54, 79
+  orig: 54, 102
+  offset: 0, 11
+  index: -1
+Fx/Effect15
+  rotate: false
+  xy: 380, 224
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+Fx/FXB
+  rotate: false
+  xy: 702, 280
+  size: 106, 106
+  orig: 128, 128
+  offset: 11, 11
+  index: -1
+Fx/FXG
+  rotate: false
+  xy: 631, 156
+  size: 106, 106
+  orig: 128, 128
+  offset: 11, 11
+  index: -1
+Fx/FXP
+  rotate: false
+  xy: 739, 172
+  size: 106, 106
+  orig: 128, 128
+  offset: 11, 11
+  index: -1
+Fx/FXR
+  rotate: false
+  xy: 631, 48
+  size: 106, 106
+  orig: 128, 128
+  offset: 11, 11
+  index: -1
+Fx/Fx_tex_light_10002_01
+  rotate: false
+  xy: 1, 371
+  size: 256, 253
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+Fx/Gem_L_001
+  rotate: false
+  xy: 689, 7
+  size: 23, 39
+  orig: 55, 80
+  offset: 4, 8
+  index: -1
+Fx/Gem_L_002
+  rotate: false
+  xy: 810, 329
+  size: 32, 51
+  orig: 55, 80
+  offset: 4, 6
+  index: -1
+Fx/Gem_L_003
+  rotate: true
+  xy: 818, 382
+  size: 41, 61
+  orig: 55, 80
+  offset: 4, 6
+  index: -1
+Fx/Gem_L_004
+  rotate: true
+  xy: 132, 26
+  size: 46, 66
+  orig: 55, 80
+  offset: 4, 7
+  index: -1
+Fx/Gem_L_005
+  rotate: true
+  xy: 625, 5
+  size: 41, 62
+  orig: 55, 80
+  offset: 10, 12
+  index: -1
+Fx/Gem_L_006
+  rotate: true
+  xy: 27, 7
+  size: 32, 54
+  orig: 55, 80
+  offset: 19, 20
+  index: -1
+Fx/Gem_L_007
+  rotate: false
+  xy: 1, 1
+  size: 24, 38
+  orig: 55, 80
+  offset: 27, 35
+  index: -1
+Fx/Gem_glow1
+  rotate: true
+  xy: 274, 700
+  size: 200, 295
+  orig: 200, 295
+  offset: 0, 0
+  index: -1
+Fx/Gem_glow2
+  rotate: false
+  xy: 1, 74
+  size: 200, 295
+  orig: 200, 295
+  offset: 0, 0
+  index: -1
+Fx/Gem_light
+  rotate: false
+  xy: 203, 177
+  size: 175, 175
+  orig: 175, 175
+  offset: 0, 0
+  index: -1
+Fx/LIGHT301
+  rotate: true
+  xy: 457, 362
+  size: 127, 124
+  orig: 128, 128
+  offset: 0, 1
+  index: -1
+Fx/Light_04
+  rotate: true
+  xy: 583, 383
+  size: 117, 115
+  orig: 128, 128
+  offset: 3, 6
+  index: -1
+Fx/Ring07_Rainbow
+  rotate: false
+  xy: 1, 626
+  size: 271, 274
+  orig: 360, 360
+  offset: 45, 42
+  index: -1
+Fx/Side_1
+  rotate: true
+  xy: 571, 704
+  size: 196, 250
+  orig: 196, 250
+  offset: 0, 0
+  index: -1
+Fx/Side_2
+  rotate: false
+  xy: 510, 235
+  size: 96, 125
+  orig: 98, 125
+  offset: 1, 0
+  index: -1
+Fx/Side_3
+  rotate: false
+  xy: 531, 108
+  size: 98, 125
+  orig: 98, 125
+  offset: 0, 0
+  index: -1
+Fx/SmallSpots
+  rotate: false
+  xy: 700, 388
+  size: 116, 116
+  orig: 128, 128
+  offset: 7, 8
+  index: -1
+Fx/Star_10
+  rotate: true
+  xy: 274, 491
+  size: 207, 210
+  orig: 256, 256
+  offset: 25, 22
+  index: -1
+Fx/g1
+  rotate: false
+  xy: 531, 1
+  size: 92, 105
+  orig: 92, 105
+  offset: 0, 0
+  index: -1
+Fx/g2
+  rotate: true
+  xy: 1, 41
+  size: 31, 129
+  orig: 31, 129
+  offset: 0, 0
+  index: -1
+Fx/g3
+  rotate: true
+  xy: 401, 5
+  size: 87, 121
+  orig: 87, 121
+  offset: 0, 0
+  index: -1
+Fx/g4
+  rotate: false
+  xy: 739, 75
+  size: 99, 95
+  orig: 99, 95
+  offset: 0, 0
+  index: -1
+Fx/g5
+  rotate: true
+  xy: 608, 264
+  size: 117, 92
+  orig: 117, 92
+  offset: 0, 0
+  index: -1
+Fx/unit_eft_spc_v05_3
+  rotate: false
+  xy: 401, 94
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+Gem_Blue
+  rotate: true
+  xy: 259, 354
+  size: 135, 196
+  orig: 136, 200
+  offset: 0, 2
+  index: -1
+Gem_Green
+  rotate: false
+  xy: 486, 502
+  size: 135, 196
+  orig: 136, 200
+  offset: 0, 2
+  index: -1
+Gem_Grey
+  rotate: false
+  xy: 623, 506
+  size: 135, 196
+  orig: 136, 200
+  offset: 0, 2
+  index: -1
+Gem_Purple
+  rotate: true
+  xy: 203, 40
+  size: 135, 196
+  orig: 136, 200
+  offset: 0, 2
+  index: -1
+Gem_orange
+  rotate: false
+  xy: 760, 506
+  size: 135, 196
+  orig: 136, 200
+  offset: 0, 2
+  index: -1
+xx
+  rotate: false
+  xy: 823, 705
+  size: 54, 57
+  orig: 54, 102
+  offset: 0, 21
+  index: -1

@@ -1,0 +1,69 @@
+import { IBuildTaskOption, BuildHook, IBuildResult } from '../../@types';
+import * as fs from 'fs';
+import * as path from 'path';
+
+interface IOptions {
+    enabled: boolean
+    gameId: string
+    gameName: {
+        jili: string
+        tada: string
+    },
+    delay: number
+    fixed: boolean
+}
+
+const PACKAGE_NAME = 'annin-framework';
+
+export const throwError: BuildHook.throwError = true;
+
+export const onBeforeBuild: BuildHook.onBeforeBuild = async function (options: IBuildTaskOption, result: IBuildResult) {
+    // @ts-ignore
+    const pkgOptions = options.packages[PACKAGE_NAME] as IOptions;
+
+    if( !pkgOptions || !pkgOptions.enabled ) {
+        console.log("annin-framework : disable build-templates")
+        return
+    }
+
+    if (!fs.existsSync(path.join(Editor.Project.path, 'build-templates/web-mobile'))) {
+         // @ts-ignore
+        fs.mkdirSync(path.join(Editor.Project.path, 'build-templates/web-mobile'), { recursive: true })
+        console.log(PACKAGE_NAME, Editor.Project.path)
+    }
+
+    fs.copyFileSync(path.join(Editor.Project.path, 'extensions/annin-framework/template/application.ejs'), path.join(Editor.Project.path, 'build-templates/web-mobile/application.ejs'))
+
+    let fileContent = fs.readFileSync(path.join(Editor.Project.path, 'extensions/annin-framework/template/index.ejs'), 'utf-8')
+
+    if (pkgOptions.gameName.tada) {
+        fileContent = fileContent.replace('%tadaTitle%', '\'' + pkgOptions.gameName.tada + '\'')
+    } else {
+        fileContent = fileContent.replace('%tadaTitle%', '\'' + options.name + '\'')
+    }
+
+    if (pkgOptions.gameName.jili) {
+        fileContent = fileContent.replace('%jiliTitle%', '\'' + pkgOptions.gameName.jili + '\'')
+    } else {
+        fileContent = fileContent.replace('%jiliTitle%', '\'' + options.name + '\'')
+    }
+
+    fileContent = fileContent.replaceAll('%gameId%', pkgOptions.gameId)
+    fs.writeFileSync(path.join(Editor.Project.path, 'build-templates/web-mobile/index.ejs'), fileContent, 'utf-8')
+
+    if (pkgOptions.delay && pkgOptions.delay > 0) {
+        await sleep(pkgOptions.delay)
+    }
+};
+
+export const onAfterBuild: BuildHook.onAfterBuild = async function (options: IBuildTaskOption, result: IBuildResult) {
+    let manifestPath = path.join(result.dest, 'assets/versions.json')
+    let bundleVers = fs.readFileSync(result.paths.settings).toString('utf8')
+    let bundleStudent = JSON.parse(bundleVers)
+
+    fs.writeFileSync(manifestPath, JSON.stringify(bundleStudent.assets.bundleVers))
+};
+
+function sleep(ms: number) {
+    return new Promise(resolve => setTimeout(resolve, ms))
+}

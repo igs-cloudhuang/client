@@ -1,0 +1,28 @@
+{
+  "general": {
+    "designResolution": {
+      "width": 640,
+      "height": 1136,
+      "fitHeight": true
+    }
+  },
+  "layer": [
+    {
+      "name": "Common",
+      "value": 524288
+    },
+    {
+      "name": "FISH",
+      "value": 8
+    },
+    {
+      "name": "BULLET",
+      "value": 16
+    },
+    {
+      "name": "UI_TOUCH",
+      "value": 32
+    }
+  ],
+  "custom_joint_texture_layouts": []
+}

@@ -1,0 +1,209 @@
+
+JP_MG_Compliment.png
+size: 1024,1024
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Win/1f_star_6
+  rotate: false
+  xy: 792, 716
+  size: 102, 68
+  orig: 102, 102
+  offset: 0, 17
+  index: -1
+Win/1f_star_7
+  rotate: true
+  xy: 705, 162
+  size: 101, 100
+  orig: 160, 160
+  offset: 28, 31
+  index: -1
+Win/BJP_GRAND_01
+  rotate: false
+  xy: 2, 308
+  size: 523, 172
+  orig: 526, 174
+  offset: 2, 2
+  index: -1
+Win/BJP_GRAND_02
+  rotate: false
+  xy: 501, 722
+  size: 289, 62
+  orig: 289, 62
+  offset: 0, 0
+  index: -1
+Win/BJP_GRAND_PIG
+  rotate: false
+  xy: 2, 738
+  size: 497, 274
+  orig: 497, 274
+  offset: 0, 0
+  index: -1
+Win/BJP_MAJOR_01
+  rotate: false
+  xy: 2, 154
+  size: 436, 152
+  orig: 436, 154
+  offset: 0, 1
+  index: -1
+Win/BJP_MAJOR_02
+  rotate: false
+  xy: 454, 527
+  size: 289, 62
+  orig: 289, 62
+  offset: 0, 0
+  index: -1
+Win/BJP_MAJOR_PIG
+  rotate: false
+  xy: 2, 482
+  size: 450, 254
+  orig: 450, 254
+  offset: 0, 0
+  index: -1
+Win/BJP_MINI_01
+  rotate: false
+  xy: 454, 591
+  size: 284, 129
+  orig: 286, 131
+  offset: 1, 1
+  index: -1
+Win/BJP_MINI_02
+  rotate: true
+  xy: 717, 265
+  size: 260, 55
+  orig: 260, 55
+  offset: 0, 0
+  index: -1
+Win/BJP_MINOR_01
+  rotate: false
+  xy: 2, 15
+  size: 396, 137
+  orig: 396, 139
+  offset: 0, 1
+  index: -1
+Win/BJP_MINOR_02
+  rotate: true
+  xy: 930, 738
+  size: 274, 58
+  orig: 274, 58
+  offset: 0, 0
+  index: -1
+Win/BJP_MINOR_PIG
+  rotate: false
+  xy: 501, 786
+  size: 427, 226
+  orig: 427, 226
+  offset: 0, 0
+  index: -1
+Win/Bg_Black2
+  rotate: false
+  xy: 2, 11
+  size: 2, 2
+  orig: 2, 2
+  offset: 0, 0
+  index: -1
+Win/Exp_Light
+  rotate: true
+  xy: 440, 142
+  size: 164, 95
+  orig: 174, 102
+  offset: 5, 3
+  index: -1
+Win/Gold_02b
+  rotate: false
+  xy: 819, 596
+  size: 40, 44
+  orig: 40, 45
+  offset: 0, 1
+  index: -1
+Win/Gold_03b
+  rotate: false
+  xy: 861, 602
+  size: 33, 38
+  orig: 35, 38
+  offset: 1, 0
+  index: -1
+Win/Gold_04b
+  rotate: true
+  xy: 745, 528
+  size: 38, 44
+  orig: 39, 46
+  offset: 0, 2
+  index: -1
+Win/Light_02
+  rotate: false
+  xy: 592, 58
+  size: 102, 102
+  orig: 102, 102
+  offset: 0, 0
+  index: -1
+Win/PP_Win03
+  rotate: false
+  xy: 745, 568
+  size: 72, 72
+  orig: 72, 72
+  offset: 0, 0
+  index: -1
+Win/SmallSpots_02
+  rotate: false
+  xy: 527, 336
+  size: 188, 189
+  orig: 205, 205
+  offset: 7, 9
+  index: -1
+Win/Spark_01
+  rotate: true
+  xy: 400, 44
+  size: 96, 190
+  orig: 205, 205
+  offset: 55, 7
+  index: -1
+Win/light_00_rainbow
+  rotate: false
+  xy: 990, 990
+  size: 22, 22
+  orig: 24, 24
+  offset: 1, 1
+  index: -1
+Win/light_00s
+  rotate: false
+  xy: 400, 20
+  size: 22, 22
+  orig: 24, 24
+  offset: 1, 1
+  index: -1
+Win/light_1
+  rotate: true
+  xy: 696, 108
+  size: 52, 160
+  orig: 52, 160
+  offset: 0, 0
+  index: -1
+Win/light_2
+  rotate: true
+  xy: 740, 642
+  size: 72, 151
+  orig: 72, 151
+  offset: 0, 0
+  index: -1
+Win/light_3
+  rotate: true
+  xy: 696, 54
+  size: 52, 149
+  orig: 52, 149
+  offset: 0, 0
+  index: -1
+Win/mg_eft_e004
+  rotate: true
+  xy: 454, 500
+  size: 25, 60
+  orig: 27, 68
+  offset: 1, 8
+  index: -1
+Win/win_light
+  rotate: false
+  xy: 537, 162
+  size: 166, 172
+  orig: 174, 182
+  offset: 4, 5
+  index: -1

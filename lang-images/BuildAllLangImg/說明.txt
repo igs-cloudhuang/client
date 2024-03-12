@@ -1,0 +1,11 @@
+請執行 BuildAll.bat 即可
+
+執行完確認有成功包出plist和png在正確的地方
+如果失敗或有疑問請找 Gary#3192
+
+
+
+main.exe
+main.js
+main.tps
+以上三個檔案不用使用他
